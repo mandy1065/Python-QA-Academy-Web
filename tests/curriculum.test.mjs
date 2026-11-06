@@ -36,3 +36,12 @@ test('detailed theory covers rules, examples, mistakes, and QA applications',()=
   }
  }
 });
+
+test('core concepts, rules and QA examples include code, output and explanation',()=>{
+ for(const c of chapters.slice(0,14))for(const l of c.lessons.filter(l=>l.type==='reading')){
+  for(const heading of ['Core concept explained','Rules and important details','How QA engineers use this']){
+   const section=l.theorySections.find(s=>s.heading===heading);
+   assert.ok(section?.code&&section?.output!==undefined&&section?.explanation,l.id+' '+heading);
+  }
+ }
+});
