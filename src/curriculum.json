@@ -5356,8 +5356,8 @@
         "title": "Start here: Functions and Reuse",
         "type": "reading",
         "intro": "What you will learn: Functions. We begin with a worked example before any independent assignments.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def is_success(status):\n    return status == 200\nprint(is_success(200))",
+        "concept": "Why do we need functions?: Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.\n\nDefine and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.\n\nCommon mistakes: Remember the colon after def, indent the function body, and call the function after defining it.\n\nReal QA example: Create a reusable validator for several API response codes.\n\nCheck your understanding: 1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?",
+        "example": "print(200 == 200)\nprint(404 == 200)",
         "instructions": "Read the example. Identify the Python syntax and predict what it prints. Then select Mark as read.",
         "starter": "def greet():\n    print(\"Hello QA\")\ngreet()",
         "solution": "def greet():\n    print(\"Hello QA\")\ngreet()",
@@ -5366,56 +5366,57 @@
         "qa": "Reuse validation logic across many test cases.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "Overview and vocabulary. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Why do we need functions?",
+            "body": "Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.",
+            "code": "print(200 == 200)\nprint(404 == 200)",
+            "output": "True\nFalse",
+            "explanation": "The same comparison is repeated. A function removes that repetition."
           },
           {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
+            "heading": "Define and call a function",
+            "body": "def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.",
+            "code": "def greet():\n    print('Hello QA')\n\ngreet()",
+            "output": "Hello QA",
+            "explanation": "The first two lines define the function. greet() executes it."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
-            "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
+            "heading": "Parameters versus arguments",
+            "body": "A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.",
+            "code": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
+            "output": "Testing Login\nTesting Search",
+            "explanation": "name is the parameter; 'Login' and 'Search' are arguments."
           },
           {
-            "heading": "Worked example",
-            "code": "def passed(status):\n    return status == 200\nprint(passed(200))",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
+            "heading": "Return versus print",
+            "body": "print displays a result. return gives a result back to the caller so other code can use it.",
+            "code": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
             "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
+            "explanation": "The function returns a boolean, which is stored in result and printed."
+          },
+          {
+            "heading": "Default parameters",
+            "body": "A default parameter supplies a value when the caller does not pass one.",
+            "code": "def check(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\n\nprint(check())\nprint(check(404))",
+            "output": "PASS\nFAIL",
+            "explanation": "check() uses the default 200; check(404) overrides it."
+          },
+          {
+            "heading": "Common mistakes",
+            "body": "Remember the colon after def, indent the function body, and call the function after defining it.",
+            "code": "def check_status(status):\n    return status == 200\n\nprint(check_status(200))",
+            "output": "True",
+            "explanation": "A missing colon or indentation causes a syntax error; forgetting parentheses does not call the function."
+          },
+          {
+            "heading": "Real QA example",
+            "body": "Create a reusable validator for several API response codes.",
+            "code": "def check_status(actual, expected):\n    return 'PASS' if actual == expected else 'FAIL'\n\nprint(check_status(200, 200))\nprint(check_status(404, 200))",
+            "output": "PASS\nFAIL",
+            "explanation": "One reusable function checks multiple cases without duplicating logic."
           },
           {
             "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "body": "1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?"
           }
         ]
       },
@@ -5424,8 +5425,8 @@
         "title": "How do you define a function?",
         "type": "reading",
         "intro": "Learn: How do you define a function? This idea is used in the exercises below.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def greet():\n    print('Hello')\ngreet()",
+        "concept": "Why do we need functions?: Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.\n\nDefine and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.",
+        "example": "print(200 == 200)\nprint(404 == 200)",
         "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
         "starter": "def greet():\n    print('Hello')\ngreet()",
         "solution": "def greet():\n    print('Hello')\ngreet()",
@@ -5434,56 +5435,32 @@
         "qa": "Apply this skill to simple test data and QA results.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "How do you define a function?. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Why do we need functions?",
+            "body": "Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.",
+            "code": "print(200 == 200)\nprint(404 == 200)",
+            "output": "True\nFalse",
+            "explanation": "The same comparison is repeated. A function removes that repetition."
           },
           {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
+            "heading": "Define and call a function",
+            "body": "def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.",
+            "code": "def greet():\n    print('Hello QA')\n\ngreet()",
+            "output": "Hello QA",
+            "explanation": "The first two lines define the function. greet() executes it."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
-            "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
+            "heading": "Parameters versus arguments",
+            "body": "A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.",
+            "code": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
+            "output": "Testing Login\nTesting Search",
+            "explanation": "name is the parameter; 'Login' and 'Search' are arguments."
           },
           {
-            "heading": "Worked example",
-            "code": "def greet():\n    print('Hello')\ngreet()",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
+            "heading": "Return versus print",
+            "body": "print displays a result. return gives a result back to the caller so other code can use it.",
+            "code": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
             "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "explanation": "The function returns a boolean, which is stored in result and printed."
           }
         ]
       },
@@ -5492,8 +5469,8 @@
         "title": "What are parameters and arguments?",
         "type": "reading",
         "intro": "Learn: What are parameters and arguments? This idea is used in the exercises below.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def show(name):\n    print(name)\nshow('Login')",
+        "concept": "Define and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.",
+        "example": "def greet():\n    print('Hello QA')\n\ngreet()",
         "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
         "starter": "def show(name):\n    print(name)\nshow('Login')",
         "solution": "def show(name):\n    print(name)\nshow('Login')",
@@ -5502,56 +5479,32 @@
         "qa": "Apply this skill to simple test data and QA results.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What are parameters and arguments?. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Define and call a function",
+            "body": "def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.",
+            "code": "def greet():\n    print('Hello QA')\n\ngreet()",
+            "output": "Hello QA",
+            "explanation": "The first two lines define the function. greet() executes it."
           },
           {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
+            "heading": "Parameters versus arguments",
+            "body": "A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.",
+            "code": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
+            "output": "Testing Login\nTesting Search",
+            "explanation": "name is the parameter; 'Login' and 'Search' are arguments."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
-            "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
-          },
-          {
-            "heading": "Worked example",
-            "code": "def show(name):\n    print(name)\nshow('Login')",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
+            "heading": "Return versus print",
+            "body": "print displays a result. return gives a result back to the caller so other code can use it.",
+            "code": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
             "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
+            "explanation": "The function returns a boolean, which is stored in result and printed."
           },
           {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Default parameters",
+            "body": "A default parameter supplies a value when the caller does not pass one.",
+            "code": "def check(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\n\nprint(check())\nprint(check(404))",
+            "output": "PASS\nFAIL",
+            "explanation": "check() uses the default 200; check(404) overrides it."
           }
         ]
       },
@@ -5560,8 +5513,8 @@
         "title": "What does return do?",
         "type": "reading",
         "intro": "Learn: What does return do? This idea is used in the exercises below.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def passed(status):\n    return status == 200\nprint(passed(200))",
+        "concept": "Parameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.\n\nCommon mistakes: Remember the colon after def, indent the function body, and call the function after defining it.",
+        "example": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
         "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
         "starter": "def passed(status):\n    return status == 200\nprint(passed(200))",
         "solution": "def passed(status):\n    return status == 200\nprint(passed(200))",
@@ -5570,56 +5523,32 @@
         "qa": "Apply this skill to simple test data and QA results.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What does return do?. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Parameters versus arguments",
+            "body": "A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.",
+            "code": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
+            "output": "Testing Login\nTesting Search",
+            "explanation": "name is the parameter; 'Login' and 'Search' are arguments."
           },
           {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
-            "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
-          },
-          {
-            "heading": "Worked example",
-            "code": "def passed(status):\n    return status == 200\nprint(passed(200))",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
+            "heading": "Return versus print",
+            "body": "print displays a result. return gives a result back to the caller so other code can use it.",
+            "code": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
             "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
+            "explanation": "The function returns a boolean, which is stored in result and printed."
           },
           {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Default parameters",
+            "body": "A default parameter supplies a value when the caller does not pass one.",
+            "code": "def check(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\n\nprint(check())\nprint(check(404))",
+            "output": "PASS\nFAIL",
+            "explanation": "check() uses the default 200; check(404) overrides it."
+          },
+          {
+            "heading": "Common mistakes",
+            "body": "Remember the colon after def, indent the function body, and call the function after defining it.",
+            "code": "def check_status(status):\n    return status == 200\n\nprint(check_status(200))",
+            "output": "True",
+            "explanation": "A missing colon or indentation causes a syntax error; forgetting parentheses does not call the function."
           }
         ]
       },
@@ -5684,8 +5613,8 @@
         "title": "Debugging lab: spot the mistake",
         "type": "reading",
         "intro": "A good QA engineer reads error messages and tests assumptions.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
+        "concept": "Return versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.\n\nCommon mistakes: Remember the colon after def, indent the function body, and call the function after defining it.\n\nReal QA example: Create a reusable validator for several API response codes.",
+        "example": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
         "instructions": "Run the example, deliberately introduce a small syntax error, read the error, and correct it. Mark as read when you can explain the fix.",
         "starter": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
         "solution": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
@@ -5694,56 +5623,32 @@
         "qa": "Reuse validation logic across many test cases.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "Debugging lab: spot the mistake. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
-            "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
-          },
-          {
-            "heading": "Worked example",
-            "code": "def add(a, b):\n    return a + b\nprint(add(2, 3))",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
+            "heading": "Return versus print",
+            "body": "print displays a result. return gives a result back to the caller so other code can use it.",
+            "code": "def is_success(status):\n    return status == 200\n\nresult = is_success(200)\nprint(result)",
             "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
+            "explanation": "The function returns a boolean, which is stored in result and printed."
           },
           {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Default parameters",
+            "body": "A default parameter supplies a value when the caller does not pass one.",
+            "code": "def check(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\n\nprint(check())\nprint(check(404))",
+            "output": "PASS\nFAIL",
+            "explanation": "check() uses the default 200; check(404) overrides it."
+          },
+          {
+            "heading": "Common mistakes",
+            "body": "Remember the colon after def, indent the function body, and call the function after defining it.",
+            "code": "def check_status(status):\n    return status == 200\n\nprint(check_status(200))",
+            "output": "True",
+            "explanation": "A missing colon or indentation causes a syntax error; forgetting parentheses does not call the function."
+          },
+          {
+            "heading": "Real QA example",
+            "body": "Create a reusable validator for several API response codes.",
+            "code": "def check_status(actual, expected):\n    return 'PASS' if actual == expected else 'FAIL'\n\nprint(check_status(200, 200))\nprint(check_status(404, 200))",
+            "output": "PASS\nFAIL",
+            "explanation": "One reusable function checks multiple cases without duplicating logic."
           }
         ]
       },
@@ -5808,8 +5713,8 @@
         "title": "Review: explain the example",
         "type": "reading",
         "intro": "Review the Python skill before moving to the next chapter.",
-        "concept": "A function is a named, reusable block of code.\n\nDefine a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.\n\nParameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-        "example": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "concept": "Real QA example: Create a reusable validator for several API response codes.\n\nCheck your understanding: 1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?",
+        "example": "def check_status(actual, expected):\n    return 'PASS' if actual == expected else 'FAIL'\n\nprint(check_status(200, 200))\nprint(check_status(404, 200))",
         "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
         "starter": "def greet():\n    print(\"Hello QA\")\ngreet()",
         "solution": "def greet():\n    print(\"Hello QA\")\ngreet()",
@@ -5818,56 +5723,15 @@
         "qa": "Review and repetition help you remember Python syntax.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "Review and self-check. A function is a named, reusable block of code. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Define a function using def name(parameters):. Call it using name(arguments).\n\nreturn sends a value to the caller; print only displays it. A function without return returns None.",
-            "code": "def greet(name):\n    return 'Hello ' + name\nprint(greet('Aman'))",
-            "output": "Hello Aman",
-            "explanation": "def creates a reusable function. The argument fills its parameter, and return gives back a value."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Parameters are local names. Default parameters are optional inputs; avoid mutable defaults for beginners.",
-            "code": "def status_label(status=200):\n    return 'PASS' if status == 200 else 'FAIL'\nprint(status_label())\nprint(status_label(404))",
+            "heading": "Real QA example",
+            "body": "Create a reusable validator for several API response codes.",
+            "code": "def check_status(actual, expected):\n    return 'PASS' if actual == expected else 'FAIL'\n\nprint(check_status(200, 200))\nprint(check_status(404, 200))",
             "output": "PASS\nFAIL",
-            "explanation": "A default parameter supplies a value when the caller does not provide one."
-          },
-          {
-            "heading": "Worked example",
-            "code": "def greet():\n    print(\"Hello QA\")\ngreet()",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "def label(name='Login'):\n    return f'Test: {name}'\nprint(label())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "def check(status)\n    return status == 200",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "def check(status):\n    return status == 200",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Reuse one status validator across multiple API test cases.",
-            "code": "def check_status(actual, expected):\n    return actual == expected\nprint(check_status(200, 200))",
-            "output": "True",
-            "explanation": "Reusable validation functions keep QA code consistent."
+            "explanation": "One reusable function checks multiple cases without duplicating logic."
           },
           {
             "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "body": "1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?"
           }
         ]
       }
@@ -6899,8 +6763,8 @@
         "title": "Understanding Object-Oriented Programming (OOP)",
         "type": "reading",
         "intro": "Understanding Object-Oriented Programming (OOP). Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "concept": "What is OOP?: Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.\n\nClass versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.\n\nInheritance: Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.\n\nEncapsulation: Encapsulation keeps related state and behavior together. By convention, a leading underscore signals an internal attribute.\n\nPolymorphism: Different classes can implement the same method name with different behavior.\n\nQA mini example: A reusable test class can store a name and actual status and return a clear result.\n\nCheck your understanding: 1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
         "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
         "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
         "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
@@ -6909,56 +6773,71 @@
         "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "Overview and vocabulary. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "What is OOP?",
+            "body": "Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.",
+            "code": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+            "output": "TestCase",
+            "explanation": "TestCase defines the blueprint; test is an object created from it."
           },
           {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
+            "heading": "Class versus object",
+            "body": "One class can create many independent objects, just as one blueprint can describe multiple houses.",
+            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
+            "output": "Login\nSearch",
+            "explanation": "a and b are different objects, each with its own name."
+          },
+          {
+            "heading": "Constructor __init__ and self",
+            "body": "__init__ runs when an object is created. self refers to that particular object. self.name stores its name.",
             "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
             "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
+            "explanation": "The argument 'Login' is saved as an attribute of test."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
-            "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
+            "heading": "Attributes",
+            "body": "An attribute is data belonging to an object. Different objects can hold different values.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
+            "output": "200\n404",
+            "explanation": "The two objects store different status values."
           },
           {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
+            "heading": "Methods",
+            "body": "A method is a function inside a class. It uses self to access that object's data.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n    def passed(self):\n        return self.status == 200\n\nprint(TestCase(200).passed())",
             "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
+            "explanation": "passed() is a method. It checks the object's status attribute."
+          },
+          {
+            "heading": "Inheritance",
+            "body": "Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
+            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nclass LoginTest(TestCase):\n    pass\n\nprint(LoginTest().result())",
+            "output": "PASS",
+            "explanation": "LoginTest inherits the result method from TestCase."
+          },
+          {
+            "heading": "Encapsulation",
+            "body": "Encapsulation keeps related state and behavior together. By convention, a leading underscore signals an internal attribute.",
+            "code": "class TestCase:\n    def __init__(self):\n        self._status = 200\n    def passed(self):\n        return self._status == 200\n\nprint(TestCase().passed())",
+            "output": "True",
+            "explanation": "The method provides a clear way to check the object's internal status."
+          },
+          {
+            "heading": "Polymorphism",
+            "body": "Different classes can implement the same method name with different behavior.",
+            "code": "class LoginTest:\n    def run(self):\n        return 'Login PASS'\n\nclass SearchTest:\n    def run(self):\n        return 'Search PASS'\n\nfor test in [LoginTest(), SearchTest()]:\n    print(test.run())",
+            "output": "Login PASS\nSearch PASS",
+            "explanation": "Both objects support run(), but each supplies its own implementation."
+          },
+          {
+            "heading": "QA mini example",
+            "body": "A reusable test class can store a name and actual status and return a clear result.",
+            "code": "class ApiTest:\n    def __init__(self, name, status):\n        self.name = name\n        self.status = status\n    def run(self):\n        return 'PASS' if self.status == 200 else 'FAIL'\n\nprint(ApiTest('Login', 200).run())",
+            "output": "PASS",
+            "explanation": "The class keeps test data and test logic together."
           },
           {
             "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "body": "1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?"
           }
         ]
       },
@@ -6981,8 +6860,8 @@
         "title": "What are classes and objects?",
         "type": "reading",
         "intro": "What are classes and objects?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "concept": "What is OOP?: Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.\n\nClass versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
         "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
         "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
         "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
@@ -6991,56 +6870,32 @@
         "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What are classes and objects?. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "What is OOP?",
+            "body": "Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.",
+            "code": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+            "output": "TestCase",
+            "explanation": "TestCase defines the blueprint; test is an object created from it."
           },
           {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
+            "heading": "Class versus object",
+            "body": "One class can create many independent objects, just as one blueprint can describe multiple houses.",
+            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
+            "output": "Login\nSearch",
+            "explanation": "a and b are different objects, each with its own name."
+          },
+          {
+            "heading": "Constructor __init__ and self",
+            "body": "__init__ runs when an object is created. self refers to that particular object. self.name stores its name.",
             "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
             "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
+            "explanation": "The argument 'Login' is saved as an attribute of test."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
-            "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
-          },
-          {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
-            "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Attributes",
+            "body": "An attribute is data belonging to an object. Different objects can hold different values.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
+            "output": "200\n404",
+            "explanation": "The two objects store different status values."
           }
         ]
       },
@@ -7049,8 +6904,8 @@
         "title": "What are __init__ and self?",
         "type": "reading",
         "intro": "What are __init__ and self?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "concept": "Class versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.",
+        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
         "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
         "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
         "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
@@ -7059,56 +6914,32 @@
         "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What are __init__ and self?. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Class versus object",
+            "body": "One class can create many independent objects, just as one blueprint can describe multiple houses.",
+            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
+            "output": "Login\nSearch",
+            "explanation": "a and b are different objects, each with its own name."
           },
           {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
+            "heading": "Constructor __init__ and self",
+            "body": "__init__ runs when an object is created. self refers to that particular object. self.name stores its name.",
             "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
             "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
+            "explanation": "The argument 'Login' is saved as an attribute of test."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
-            "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
+            "heading": "Attributes",
+            "body": "An attribute is data belonging to an object. Different objects can hold different values.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
+            "output": "200\n404",
+            "explanation": "The two objects store different status values."
           },
           {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
+            "heading": "Methods",
+            "body": "A method is a function inside a class. It uses self to access that object's data.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n    def passed(self):\n        return self.status == 200\n\nprint(TestCase(200).passed())",
             "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "explanation": "passed() is a method. It checks the object's status attribute."
           }
         ]
       },
@@ -7117,7 +6948,7 @@
         "title": "What are attributes?",
         "type": "reading",
         "intro": "What are attributes?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
+        "concept": "Constructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.\n\nInheritance: Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
         "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
         "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
         "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
@@ -7127,56 +6958,32 @@
         "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What are attributes?. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
+            "heading": "Constructor __init__ and self",
+            "body": "__init__ runs when an object is created. self refers to that particular object. self.name stores its name.",
             "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
             "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
+            "explanation": "The argument 'Login' is saved as an attribute of test."
           },
           {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
-            "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
+            "heading": "Attributes",
+            "body": "An attribute is data belonging to an object. Different objects can hold different values.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
+            "output": "200\n404",
+            "explanation": "The two objects store different status values."
           },
           {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
+            "heading": "Methods",
+            "body": "A method is a function inside a class. It uses self to access that object's data.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n    def passed(self):\n        return self.status == 200\n\nprint(TestCase(200).passed())",
             "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
+            "explanation": "passed() is a method. It checks the object's status attribute."
           },
           {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Inheritance",
+            "body": "Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
+            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nclass LoginTest(TestCase):\n    pass\n\nprint(LoginTest().result())",
+            "output": "PASS",
+            "explanation": "LoginTest inherits the result method from TestCase."
           }
         ]
       },
@@ -7185,8 +6992,8 @@
         "title": "What are methods?",
         "type": "reading",
         "intro": "What are methods?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "concept": "Attributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.\n\nInheritance: Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.\n\nEncapsulation: Encapsulation keeps related state and behavior together. By convention, a leading underscore signals an internal attribute.",
+        "example": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
         "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
         "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
         "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
@@ -7195,56 +7002,32 @@
         "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "What are methods?. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
+            "heading": "Attributes",
+            "body": "An attribute is data belonging to an object. Different objects can hold different values.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n\nfirst = TestCase(200)\nsecond = TestCase(404)\nprint(first.status)\nprint(second.status)",
+            "output": "200\n404",
+            "explanation": "The two objects store different status values."
           },
           {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
-            "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
-          },
-          {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
+            "heading": "Methods",
+            "body": "A method is a function inside a class. It uses self to access that object's data.",
+            "code": "class TestCase:\n    def __init__(self, status):\n        self.status = status\n    def passed(self):\n        return self.status == 200\n\nprint(TestCase(200).passed())",
             "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
+            "explanation": "passed() is a method. It checks the object's status attribute."
           },
           {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "heading": "Inheritance",
+            "body": "Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
+            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nclass LoginTest(TestCase):\n    pass\n\nprint(LoginTest().result())",
+            "output": "PASS",
+            "explanation": "LoginTest inherits the result method from TestCase."
+          },
+          {
+            "heading": "Encapsulation",
+            "body": "Encapsulation keeps related state and behavior together. By convention, a leading underscore signals an internal attribute.",
+            "code": "class TestCase:\n    def __init__(self):\n        self._status = 200\n    def passed(self):\n        return self._status == 200\n\nprint(TestCase().passed())",
+            "output": "True",
+            "explanation": "The method provides a clear way to check the object's internal status."
           }
         ]
       },
@@ -7323,8 +7106,8 @@
         "title": "Review: explain the example",
         "type": "reading",
         "intro": "Review the Python skill before moving to the next chapter.",
-        "concept": "A class defines a blueprint; an object is an instance of that class.\n\nclass TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().\n\nInheritance lets one class reuse another, but master simple classes and methods first.",
-        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "concept": "QA mini example: A reusable test class can store a name and actual status and return a clear result.\n\nCheck your understanding: 1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?",
+        "example": "class ApiTest:\n    def __init__(self, name, status):\n        self.name = name\n        self.status = status\n    def run(self):\n        return 'PASS' if self.status == 200 else 'FAIL'\n\nprint(ApiTest('Login', 200).run())",
         "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
         "starter": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
         "solution": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
@@ -7333,56 +7116,15 @@
         "qa": "Review and repetition help you remember Python syntax.",
         "theorySections": [
           {
-            "heading": "What you will learn",
-            "body": "Review and self-check. A class defines a blueprint; an object is an instance of that class. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "class TestCase: defines a class. __init__(self, ...) initializes each object; self refers to that object.\n\nAttributes store object state; methods are functions attached to the class. Call obj.method().",
-            "code": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-            "output": "Login",
-            "explanation": "A class defines a blueprint. __init__ initializes the object, and self.name stores an attribute."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Inheritance lets one class reuse another, but master simple classes and methods first.",
-            "code": "class TestCase:\n    def run(self):\n        return 'PASS'\n\nprint(TestCase().run())",
+            "heading": "QA mini example",
+            "body": "A reusable test class can store a name and actual status and return a clear result.",
+            "code": "class ApiTest:\n    def __init__(self, name, status):\n        self.name = name\n        self.status = status\n    def run(self):\n        return 'PASS' if self.status == 200 else 'FAIL'\n\nprint(ApiTest('Login', 200).run())",
             "output": "PASS",
-            "explanation": "Methods belong to classes and use self to access the object."
-          },
-          {
-            "heading": "Worked example",
-            "code": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\n\nprint(TestCase().result())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "class TestCase:\n    def result():\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "class TestCase:\n    def result(self):\n        return 'PASS'\nprint(TestCase().result())",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A test case class can store a test name and expected status and provide a check method.",
-            "code": "class StatusTest:\n    def __init__(self, actual):\n        self.actual = actual\n    def passed(self):\n        return self.actual == 200\n\nprint(StatusTest(200).passed())",
-            "output": "True",
-            "explanation": "Reusable QA objects can store test data and expose validation methods."
+            "explanation": "The class keeps test data and test logic together."
           },
           {
             "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+            "body": "1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?"
           }
         ]
       }
