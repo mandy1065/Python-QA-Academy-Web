@@ -3,7 +3,7 @@
     "id": "01",
     "title": "Getting Started with Python",
     "topic": "print() and basic syntax",
-    "summary": "Learn how Python programs run, print messages, and report QA results. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Learn how Python programs run, print messages, and report QA results. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain print() and basic syntax",
       "Read and predict Python output",
@@ -24,6 +24,20 @@
         "expected": "Hello, Python!",
         "hint": "Use print() with quoted text.",
         "qa": "Use print() to inspect test results and troubleshoot failures."
+      },
+      {
+        "id": "01-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nprint(\"Hello, Python!\")\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "print(\"Hello, Python!\")",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Hello, Python!",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "print(\"Hello, Python!\")",
+        "expected": "Hello, Python!",
+        "hint": "Start by copying the first line of the worked example: print(\"Hello, Python!\")",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "01-01",
@@ -136,6 +150,20 @@
         "expected": "Ready",
         "hint": "Comments begin with # and do not run.",
         "qa": "Use print() to inspect test results and troubleshoot failures."
+      },
+      {
+        "id": "01-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nprint(\"Hello, Python!\")\n\nExpected output:\nHello, Python!\n\nThen try changing one value and predict what happens.",
+        "example": "print(\"Hello, Python!\")",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "print(\"Hello, Python!\")",
+        "solution": "print(\"Hello, Python!\")",
+        "expected": "Hello, Python!",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -143,7 +171,7 @@
     "id": "02",
     "title": "Variables and Naming",
     "topic": "Assignment, naming, reassignment",
-    "summary": "Store and reuse values in automated tests. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Store and reuse values in automated tests. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Assignment, naming, reassignment",
       "Read and predict Python output",
@@ -164,6 +192,20 @@
         "expected": "Chrome",
         "hint": "Assign text to browser.",
         "qa": "Store test names, expected results and actual results."
+      },
+      {
+        "id": "02-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nbrowser = \"Chrome\"\nprint(browser)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "browser = \"Chrome\"\nprint(browser)",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Chrome",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "browser = \"Chrome\"\nprint(browser)",
+        "expected": "Chrome",
+        "hint": "Start by copying the first line of the worked example: browser = \"Chrome\"",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "02-01",
@@ -276,6 +318,20 @@
         "expected": "200",
         "hint": "Assign a variable to another variable.",
         "qa": "Store test names, expected results and actual results."
+      },
+      {
+        "id": "02-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nbrowser = \"Chrome\"\nprint(browser)\n\nExpected output:\nChrome\n\nThen try changing one value and predict what happens.",
+        "example": "browser = \"Chrome\"\nprint(browser)",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "browser = \"Chrome\"\nprint(browser)",
+        "solution": "browser = \"Chrome\"\nprint(browser)",
+        "expected": "Chrome",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -283,7 +339,7 @@
     "id": "03",
     "title": "Python Data Types",
     "topic": "Strings, integers, floats and booleans",
-    "summary": "Choose the right types for QA test data. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Choose the right types for QA test data. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Strings, integers, floats and booleans",
       "Read and predict Python output",
@@ -304,6 +360,20 @@
         "expected": "PASS",
         "hint": "Text needs quotes.",
         "qa": "Validate that API fields contain the expected data type."
+      },
+      {
+        "id": "03-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nstatus = \"PASS\"\nprint(status)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "status = \"PASS\"\nprint(status)",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: PASS",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "status = \"PASS\"\nprint(status)",
+        "expected": "PASS",
+        "hint": "Start by copying the first line of the worked example: status = \"PASS\"",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "03-01",
@@ -416,6 +486,20 @@
         "expected": "43",
         "hint": "Use int() for numeric text.",
         "qa": "Validate that API fields contain the expected data type."
+      },
+      {
+        "id": "03-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nstatus = \"PASS\"\nprint(status)\n\nExpected output:\nPASS\n\nThen try changing one value and predict what happens.",
+        "example": "status = \"PASS\"\nprint(status)",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "status = \"PASS\"\nprint(status)",
+        "solution": "status = \"PASS\"\nprint(status)",
+        "expected": "PASS",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -423,7 +507,7 @@
     "id": "04",
     "title": "Strings and Text",
     "topic": "Concatenation, indexing and methods",
-    "summary": "Validate text returned from APIs and applications. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Validate text returned from APIs and applications. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Concatenation, indexing and methods",
       "Read and predict Python output",
@@ -444,6 +528,20 @@
         "expected": "API Testing",
         "hint": "Use + to join strings.",
         "qa": "Clean usernames and validate text in API responses."
+      },
+      {
+        "id": "04-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nprint(\"API\" + \" \" + \"Testing\")\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "print(\"API\" + \" \" + \"Testing\")",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: API Testing",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "print(\"API\" + \" \" + \"Testing\")",
+        "expected": "API Testing",
+        "hint": "Start by copying the first line of the worked example: print(\"API\" + \" \" + \"Testing\")",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "04-01",
@@ -556,6 +654,20 @@
         "expected": "PASS",
         "hint": "Use .strip().",
         "qa": "Clean usernames and validate text in API responses."
+      },
+      {
+        "id": "04-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nprint(\"API\" + \" \" + \"Testing\")\n\nExpected output:\nAPI Testing\n\nThen try changing one value and predict what happens.",
+        "example": "print(\"API\" + \" \" + \"Testing\")",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "print(\"API\" + \" \" + \"Testing\")",
+        "solution": "print(\"API\" + \" \" + \"Testing\")",
+        "expected": "API Testing",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -563,7 +675,7 @@
     "id": "05",
     "title": "Operators and Comparisons",
     "topic": "Arithmetic, comparisons and logic",
-    "summary": "Write assertions and check expected vs actual values. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Write assertions and check expected vs actual values. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Arithmetic, comparisons and logic",
       "Read and predict Python output",
@@ -584,6 +696,20 @@
         "expected": "7",
         "hint": "Use + for addition.",
         "qa": "Check status codes, response time and expected values."
+      },
+      {
+        "id": "05-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nprint(3 + 4)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "print(3 + 4)",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: 7",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "print(3 + 4)",
+        "expected": "7",
+        "hint": "Start by copying the first line of the worked example: print(3 + 4)",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "05-01",
@@ -696,6 +822,20 @@
         "expected": "80.0",
         "hint": "Divide passed by total and multiply by 100.",
         "qa": "Check status codes, response time and expected values."
+      },
+      {
+        "id": "05-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nprint(3 + 4)\n\nExpected output:\n7\n\nThen try changing one value and predict what happens.",
+        "example": "print(3 + 4)",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "print(3 + 4)",
+        "solution": "print(3 + 4)",
+        "expected": "7",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -703,7 +843,7 @@
     "id": "06",
     "title": "Lists and Collections",
     "topic": "Indexing, appending and iteration",
-    "summary": "Manage collections of test cases and responses. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Manage collections of test cases and responses. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Indexing, appending and iteration",
       "Read and predict Python output",
@@ -724,6 +864,20 @@
         "expected": "Login",
         "hint": "Index zero is first.",
         "qa": "Keep an ordered set of test cases and test outcomes."
+      },
+      {
+        "id": "06-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\ntests = [\"Login\", \"Search\"]\nprint(tests[0])\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "tests = [\"Login\", \"Search\"]\nprint(tests[0])",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Login",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "tests = [\"Login\", \"Search\"]\nprint(tests[0])",
+        "expected": "Login",
+        "hint": "Start by copying the first line of the worked example: tests = [\"Login\", \"Search\"]",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "06-01",
@@ -836,6 +990,20 @@
         "expected": "2",
         "hint": "Use count().",
         "qa": "Keep an ordered set of test cases and test outcomes."
+      },
+      {
+        "id": "06-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\ntests = [\"Login\", \"Search\"]\nprint(tests[0])\n\nExpected output:\nLogin\n\nThen try changing one value and predict what happens.",
+        "example": "tests = [\"Login\", \"Search\"]\nprint(tests[0])",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "tests = [\"Login\", \"Search\"]\nprint(tests[0])",
+        "solution": "tests = [\"Login\", \"Search\"]\nprint(tests[0])",
+        "expected": "Login",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -843,7 +1011,7 @@
     "id": "07",
     "title": "Dictionaries and JSON",
     "topic": "Keys, values and API responses",
-    "summary": "Inspect structured API responses. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Inspect structured API responses. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Keys, values and API responses",
       "Read and predict Python output",
@@ -864,6 +1032,20 @@
         "expected": "200",
         "hint": "Access by key.",
         "qa": "Read and validate JSON-like API responses."
+      },
+      {
+        "id": "07-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nresponse = {\"status\": 200}\nprint(response[\"status\"])\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "response = {\"status\": 200}\nprint(response[\"status\"])",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: 200",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "response = {\"status\": 200}\nprint(response[\"status\"])",
+        "expected": "200",
+        "hint": "Start by copying the first line of the worked example: response = {\"status\": 200}",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "07-01",
@@ -976,6 +1158,20 @@
         "expected": "True",
         "hint": "Use in on a dictionary.",
         "qa": "Read and validate JSON-like API responses."
+      },
+      {
+        "id": "07-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nresponse = {\"status\": 200}\nprint(response[\"status\"])\n\nExpected output:\n200\n\nThen try changing one value and predict what happens.",
+        "example": "response = {\"status\": 200}\nprint(response[\"status\"])",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "response = {\"status\": 200}\nprint(response[\"status\"])",
+        "solution": "response = {\"status\": 200}\nprint(response[\"status\"])",
+        "expected": "200",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -983,7 +1179,7 @@
     "id": "08",
     "title": "Conditions and Decisions",
     "topic": "if, elif, else and indentation",
-    "summary": "Report PASS or FAIL based on actual results. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Report PASS or FAIL based on actual results. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain if, elif, else and indentation",
       "Read and predict Python output",
@@ -1004,6 +1200,20 @@
         "expected": "PASS",
         "hint": "Indent the body.",
         "qa": "Decide whether a test passed based on its actual result."
+      },
+      {
+        "id": "08-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\ncode = 200\nif code == 200:\n    print(\"PASS\")\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "code = 200\nif code == 200:\n    print(\"PASS\")",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: PASS",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "code = 200\nif code == 200:\n    print(\"PASS\")",
+        "expected": "PASS",
+        "hint": "Start by copying the first line of the worked example: code = 200",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "08-01",
@@ -1116,6 +1326,20 @@
         "expected": "PASS",
         "hint": "Both conditions must be true.",
         "qa": "Decide whether a test passed based on its actual result."
+      },
+      {
+        "id": "08-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\ncode = 200\nif code == 200:\n    print(\"PASS\")\n\nExpected output:\nPASS\n\nThen try changing one value and predict what happens.",
+        "example": "code = 200\nif code == 200:\n    print(\"PASS\")",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "code = 200\nif code == 200:\n    print(\"PASS\")",
+        "solution": "code = 200\nif code == 200:\n    print(\"PASS\")",
+        "expected": "PASS",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1123,7 +1347,7 @@
     "id": "09",
     "title": "For Loops",
     "topic": "for, range and iteration",
-    "summary": "Run the same validation across many test cases. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Run the same validation across many test cases. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain for, range and iteration",
       "Read and predict Python output",
@@ -1144,6 +1368,20 @@
         "expected": "Login\nSearch",
         "hint": "Use for ... in ... .",
         "qa": "Run the same check against multiple test cases."
+      },
+      {
+        "id": "09-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nfor test in [\"Login\", \"Search\"]:\n    print(test)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "for test in [\"Login\", \"Search\"]:\n    print(test)",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Login\nSearch",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "for test in [\"Login\", \"Search\"]:\n    print(test)",
+        "expected": "Login\nSearch",
+        "hint": "Start by copying the first line of the worked example: for test in [\"Login\", \"Search\"]:",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "09-01",
@@ -1256,6 +1494,20 @@
         "expected": "1 A\n2 B",
         "hint": "Use enumerate with a start index.",
         "qa": "Run the same check against multiple test cases."
+      },
+      {
+        "id": "09-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nfor test in [\"Login\", \"Search\"]:\n    print(test)\n\nExpected output:\nLogin\nSearch\n\nThen try changing one value and predict what happens.",
+        "example": "for test in [\"Login\", \"Search\"]:\n    print(test)",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "for test in [\"Login\", \"Search\"]:\n    print(test)",
+        "solution": "for test in [\"Login\", \"Search\"]:\n    print(test)",
+        "expected": "Login\nSearch",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1263,7 +1515,7 @@
     "id": "10",
     "title": "While Loops and Retries",
     "topic": "Conditions, counters and safe retries",
-    "summary": "Implement bounded retry logic for flaky operations. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Implement bounded retry logic for flaky operations. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Conditions, counters and safe retries",
       "Read and predict Python output",
@@ -1284,6 +1536,20 @@
         "expected": "1\n2",
         "hint": "Increment each iteration.",
         "qa": "Retry a failing operation a limited number of times."
+      },
+      {
+        "id": "10-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nattempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "attempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: 1\n2",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "attempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1",
+        "expected": "1\n2",
+        "hint": "Start by copying the first line of the worked example: attempt = 1",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "10-01",
@@ -1396,6 +1662,20 @@
         "expected": "2",
         "hint": "Keep the loop bounded.",
         "qa": "Retry a failing operation a limited number of times."
+      },
+      {
+        "id": "10-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nattempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1\n\nExpected output:\n1\n2\n\nThen try changing one value and predict what happens.",
+        "example": "attempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "attempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1",
+        "solution": "attempt = 1\nwhile attempt <= 2:\n    print(attempt)\n    attempt += 1",
+        "expected": "1\n2",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1403,7 +1683,7 @@
     "id": "11",
     "title": "Functions and Reuse",
     "topic": "Parameters, return and scope",
-    "summary": "Create reusable QA helper functions. Follow the theory, guided examples and short assignments in order.",
+    "summary": "Create reusable QA helper functions. Follow the theory, guided examples and short assignments in order. Includes a guided workshop and review.",
     "objectives": [
       "Explain Parameters, return and scope",
       "Read and predict Python output",
@@ -1424,6 +1704,20 @@
         "expected": "Hello QA",
         "hint": "Call the function after defining it.",
         "qa": "Reuse validation logic across many test cases."
+      },
+      {
+        "id": "11-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\ndef greet():\n    print(\"Hello QA\")\ngreet()\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Hello QA",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "expected": "Hello QA",
+        "hint": "Start by copying the first line of the worked example: def greet():",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "11-01",
@@ -1536,6 +1830,20 @@
         "expected": "Login\nSearch",
         "hint": "Reuse the function.",
         "qa": "Reuse validation logic across many test cases."
+      },
+      {
+        "id": "11-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\ndef greet():\n    print(\"Hello QA\")\ngreet()\n\nExpected output:\nHello QA\n\nThen try changing one value and predict what happens.",
+        "example": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "solution": "def greet():\n    print(\"Hello QA\")\ngreet()",
+        "expected": "Hello QA",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1543,7 +1851,7 @@
     "id": "12",
     "title": "Error Handling and Debugging",
     "topic": "Error Handling and Debugging",
-    "summary": "Learn how to recognize, catch and explain Python errors.",
+    "summary": "Learn how to recognize, catch and explain Python errors. Includes a guided workshop and review.",
     "objectives": [
       "Errors tell you what went wrong. A try block contains risky code; except handles a known exception. Handle only errors you expect, and print a useful message.",
       "Complete five beginner assignments",
@@ -1563,6 +1871,20 @@
         "expected": "Example only",
         "hint": "Read the example before practising.",
         "qa": "Automation scripts should report failures clearly instead of crashing without context."
+      },
+      {
+        "id": "12-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\ntry:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: Invalid number",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "expected": "Invalid number",
+        "hint": "Start by copying the first line of the worked example: try:",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "12-theory-1",
@@ -1689,6 +2011,20 @@
         "expected": "FAIL",
         "hint": "Raise ValueError and catch it.",
         "qa": "Automation scripts should report failures clearly instead of crashing without context."
+      },
+      {
+        "id": "12-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\ntry:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')\n\nExpected output:\nInvalid number\n\nThen try changing one value and predict what happens.",
+        "example": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "solution": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+        "expected": "Invalid number",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1696,7 +2032,7 @@
     "id": "13",
     "title": "Files and JSON for QA",
     "topic": "Files and JSON for QA",
-    "summary": "Read, write and inspect simple test data safely.",
+    "summary": "Read, write and inspect simple test data safely. Includes a guided workshop and review.",
     "objectives": [
       "A file stores data outside a Python variable. Use with open(path, mode) to manage it. json.loads converts JSON text into Python data; json.dumps converts Python data into JSON text. Use an in-memory StringIO object when practising without real files.",
       "Complete five beginner assignments",
@@ -1716,6 +2052,20 @@
         "expected": "Example only",
         "hint": "Read the example before practising.",
         "qa": "QA engineers inspect API JSON responses and prepare reusable test data."
+      },
+      {
+        "id": "13-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nimport json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: 200",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+        "expected": "200",
+        "hint": "Start by copying the first line of the worked example: import json",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "13-theory-1",
@@ -1842,6 +2192,20 @@
         "expected": "True",
         "hint": "Parse JSON, then compare the status value.",
         "qa": "QA engineers inspect API JSON responses and prepare reusable test data."
+      },
+      {
+        "id": "13-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nimport json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])\n\nExpected output:\n200\n\nThen try changing one value and predict what happens.",
+        "example": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+        "solution": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+        "expected": "200",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -1849,7 +2213,7 @@
     "id": "14",
     "title": "Object-Oriented Programming (OOP)",
     "topic": "Object-Oriented Programming (OOP)",
-    "summary": "Create simple classes and objects for reusable QA code.",
+    "summary": "Create simple classes and objects for reusable QA code. Includes a guided workshop and review.",
     "objectives": [
       "A class is a blueprint. An object is one instance of that class. __init__ runs when an object is created; self refers to that object. A method is a function inside a class. Start with attributes and methods before inheritance.",
       "Complete five beginner assignments",
@@ -1869,6 +2233,20 @@
         "expected": "Example only",
         "hint": "Read the example before practising.",
         "qa": "Page objects and reusable test helpers organize real QA automation."
+      },
+      {
+        "id": "14-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nclass TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: TestCase",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "expected": "TestCase",
+        "hint": "Start by copying the first line of the worked example: class TestCase:",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "14-theory-1",
@@ -1995,6 +2373,20 @@
         "expected": "PASS",
         "hint": "Combine __init__, attributes and a method.",
         "qa": "Page objects and reusable test helpers organize real QA automation."
+      },
+      {
+        "id": "14-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nclass TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)\n\nExpected output:\nTestCase\n\nThen try changing one value and predict what happens.",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "solution": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "expected": "TestCase",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   },
@@ -2002,7 +2394,7 @@
     "id": "15",
     "title": "QA Mini Assignments — Final Review",
     "topic": "Python fundamentals for QA",
-    "summary": "15 beginner assignments covering the Python skills taught throughout the academy.",
+    "summary": "15 beginner assignments covering the Python skills taught throughout the academy. Includes a guided workshop and review.",
     "objectives": [
       "Practice Python data types and control flow",
       "Learn beginner QA automation concepts",
@@ -2022,6 +2414,20 @@
         "expected": "PASS",
         "hint": "Try the assignment before viewing the answer.",
         "qa": "These skills are used in beginner QA automation."
+      },
+      {
+        "id": "15-guided",
+        "title": "Guided workshop: follow the worked example",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nprint('QA READY')\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "print('QA READY')",
+        "instructions": "Recreate the demonstrated example from this chapter. Print the same result: QA READY",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "print('QA READY')",
+        "expected": "QA READY",
+        "hint": "Start by copying the first line of the worked example: print('QA READY')",
+        "qa": "Guided workshops prepare you for independent assignments."
       },
       {
         "id": "15-assignment-01",
@@ -2232,6 +2638,20 @@
         "expected": "Passed: 2\nFailed: 2",
         "hint": "A successful HTTP status code is from 200 through 299.",
         "qa": "Run Code to inspect your output; Run Tests to check it against the expected result."
+      },
+      {
+        "id": "15-review",
+        "title": "Review: explain the example",
+        "type": "reading",
+        "intro": "Review the Python skill before moving to the next chapter.",
+        "concept": "Explain in your own words what each line does and predict the output.\n\nprint('QA READY')\n\nExpected output:\nQA READY\n\nThen try changing one value and predict what happens.",
+        "example": "print('QA READY')",
+        "instructions": "Run the example, explain why it works, and mark as read. If you are unsure, revisit the theory.",
+        "starter": "print('QA READY')",
+        "solution": "print('QA READY')",
+        "expected": "QA READY",
+        "hint": "Read the concept lesson and compare each line to the output.",
+        "qa": "Review and repetition help you remember Python syntax."
       }
     ]
   }
