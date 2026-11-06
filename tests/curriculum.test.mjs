@@ -1,9 +1,27 @@
-import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';import {spawnSync} from 'node:child_process';
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
 const chapters=JSON.parse(fs.readFileSync(new URL('../src/curriculum.json',import.meta.url),'utf8'));
-test('12 chapters and 115 unique lessons',()=>{assert.equal(chapters.length,12);const all=chapters.flatMap(c=>c.lessons);assert.equal(all.length,115);assert.equal(new Set(all.map(l=>l.id)).size,115);});
-test('all lessons have complete instructional content',()=>{for(const c of chapters){assert.equal(c.lessons.length,c.id==='12'?16:9);for(const l of c.lessons){for(const key of ['title','intro','concept','example','instructions','starter','solution','expected','hint','qa'])assert.ok(typeof l[key]==='string'&&l[key].trim(),`${l.id} missing ${key}`);}}});
-test('all 92 exercises and projects have nonempty expected outputs',()=>{
- const items=chapters.flatMap(c=>c.lessons.filter(l=>l.type==='exercise'||l.type==='project'));
- assert.equal(items.length,92);
- for(const l of items){assert.ok(l.solution.trim());assert.ok(l.expected.trim());}
+const all=chapters.flatMap(c=>c.lessons);
+test('15 chapters, unique lesson IDs, and substantial practice',()=>{
+ assert.equal(chapters.length,15);
+ assert.equal(new Set(all.map(l=>l.id)).size,all.length);
+ assert.ok(all.length>=170);
+});
+test('each chapter teaches before assigning and includes workshop and review',()=>{
+ for(const c of chapters){
+  assert.equal(c.lessons[0].type,'reading',c.title);
+  assert.ok(c.lessons.some(l=>l.id.endsWith('-guided')),c.title);
+  assert.ok(c.lessons.some(l=>l.id.endsWith('-review')),c.title);
+  assert.ok(c.lessons.filter(l=>l.type==='exercise').length>=5,c.title);
+ }
+});
+test('lessons contain complete teaching and solution fields',()=>{
+ for(const l of all){
+  for(const k of ['title','intro','concept','example','instructions','starter','solution','expected','hint','qa'])
+   assert.ok(typeof l[k]==='string'&&l[k].trim(),l.id+' missing '+k);
+ }
+});
+test('every practice item has expected output',()=>{
+ for(const l of all.filter(l=>['exercise','project'].includes(l.type)))assert.ok(l.expected.trim(),l.id);
 });
