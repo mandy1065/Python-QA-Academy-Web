@@ -8,3 +8,20 @@
 
 .example-output{background:#f0fdf4;border:1px solid #bbf7d0;color:#14532d}
 .theory-explanation{border-left:3px solid #0d9488;padding:10px 14px;background:#f0fdfa;border-radius:4px;line-height:1.7;margin:10px 0 16px}
+
+/* Readability pass: comfortable text sizes across lessons and navigation */
+body{font-size:16px}
+.shell{grid-template-columns:315px minmax(0,1fr)}
+.sidebar-head p,.chapter-num,.chapter-name,.chapter-check,.sidebar-foot{font-size:14px}
+.lesson-link{font-size:14px;line-height:1.5;padding:11px 8px}
+.lesson-group-title{font-size:14px;line-height:1.5}
+.eyebrow,.concept-label,.example-label,.breadcrumb{font-size:12px}
+.lesson-top p,.panel-header,.task-title,.instruction-scroll details,.instruction-scroll summary{font-size:15px}
+.instruction-scroll p,.theory-prose,.theory-explanation{font-size:16px;line-height:1.85}
+.instruction-scroll h2{font-size:24px}
+.theory-section h3{font-size:19px}
+.example,.solution,.expected,.expected pre{font-size:15px;line-height:1.75}
+#code-editor,.line-gutter{font-size:15px;line-height:26px}
+.console{font-size:14px;line-height:23px}
+.feedback,.lesson-tip,.actions button,.bottom-nav button,.bottom-nav span,.small,.top-right,.step-tag,.kind{font-size:14px}
+@media(max-width:700px){.shell{grid-template-columns:minmax(0,1fr)}.instruction-scroll{padding:18px}.lesson-top h1{font-size:25px}}
