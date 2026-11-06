@@ -15,5 +15,5 @@ for chapter in chapters:
             exec(compile(lesson['solution'], lesson['id'], 'exec'), {'__name__': '__main__'})
         assert output.getvalue().strip() == lesson['expected'].strip(), lesson['id']
         count += 1
-assert count == 84, count
+assert count == 122, count
 print(f'PASS: {count} runnable reference solutions match expected output')
