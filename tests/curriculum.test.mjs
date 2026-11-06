@@ -25,3 +25,14 @@ test('lessons contain complete teaching and solution fields',()=>{
 test('every practice item has expected output',()=>{
  for(const l of all.filter(l=>['exercise','project'].includes(l.type)))assert.ok(l.expected.trim(),l.id);
 });
+
+test('detailed theory covers rules, examples, mistakes, and QA applications',()=>{
+ for(const c of chapters.slice(0,14)){
+  const theory=c.lessons.filter(l=>l.type==='reading');
+  for(const l of theory){
+   assert.ok(Array.isArray(l.theorySections)&&l.theorySections.length>=8,l.id);
+   assert.ok(l.theorySections.some(s=>s.heading==='Common mistake and correction'),l.id);
+   assert.ok(l.theorySections.some(s=>s.heading==='How QA engineers use this'),l.id);
+  }
+ }
+});
