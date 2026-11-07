@@ -28,54 +28,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. Python executes statements from top to bottom. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "print() displays values in the console; text goes in quotes and numbers can be unquoted.\n\nComments begin with # and are ignored when Python runs.",
-            "code": "message = 'Hello QA'\nprint(message)",
-            "output": "Hello QA",
-            "explanation": "print() displays a value. The quotation marks tell Python that Hello QA is text."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "SyntaxError happens when Python cannot parse code. Check quotes and parentheses.",
-            "code": "# This line is a comment\nprint('Test started')",
-            "output": "Test started",
-            "explanation": "Python ignores comments beginning with #, but executes the print statement."
-          },
-          {
-            "heading": "Worked example",
-            "code": "print('Starting test')\nprint('PASS')",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "# Comment explaining a test\nprint(3)",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "print('Missing quote)",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "print('Missing quote')",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Use print() to inspect values when a test fails.",
-            "code": "test_name = 'Login'\nprint('Running:', test_name)",
-            "output": "Running: Login",
-            "explanation": "QA engineers print test names and values to understand what the program is doing."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -96,6 +48,19 @@
           {
             "heading": "What you will learn",
             "body": "What does print() do?. Python executes statements from top to bottom. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "print() displays values in the console; text goes in quotes and numbers can be unquoted.\n\nComments begin with # and are ignored when Python runs.",
+            "code": "message = 'Hello QA'\nprint(message)",
+            "output": "Hello QA",
+            "explanation": "print() displays a value. The quotation marks tell Python that Hello QA is text."
+          },
+          {
+            "heading": "Worked example",
+            "code": "print('Starting test')\nprint('PASS')",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -124,6 +89,30 @@
             "body": "How do comments work?. Python executes statements from top to bottom. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "SyntaxError happens when Python cannot parse code. Check quotes and parentheses.",
+            "code": "# This line is a comment\nprint('Test started')",
+            "output": "Test started",
+            "explanation": "Python ignores comments beginning with #, but executes the print statement."
+          },
+          {
+            "heading": "Second example",
+            "code": "# Comment explaining a test\nprint(3)",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "print('Missing quote)",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "print('Missing quote')",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "# Check login\nprint('PASS')",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -148,6 +137,17 @@
           {
             "heading": "What you will learn",
             "body": "How do you read Python errors?. Python executes statements from top to bottom. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Use print() to inspect values when a test fails.",
+            "code": "test_name = 'Login'\nprint('Running:', test_name)",
+            "output": "Running: Login",
+            "explanation": "QA engineers print test names and values to understand what the program is doing."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -376,54 +376,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A variable is a label for a value stored in memory. It makes code readable and reusable. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Use = to assign a value. The name is on the left and the value is on the right.\n\nNames may start with a letter or underscore, never a digit; remaining characters may include digits. Python is case-sensitive and keywords like class or if cannot be names.",
-            "code": "name = 'John Doe'\nprint(name)",
-            "output": "John Doe",
-            "explanation": "The equals sign assigns the text John Doe to the variable named name."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Reassignment changes what a name refers to. Python infers the type from the value.",
-            "code": "test_status = 'PASS'\nTest_Status = 'FAIL'\nprint(test_status)\nprint(Test_Status)",
-            "output": "PASS\nFAIL",
-            "explanation": "Variable names are case-sensitive. They may contain underscores and digits, but cannot begin with a digit."
-          },
-          {
-            "heading": "Worked example",
-            "code": "name = 'John Doe'\nprint(name)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "test_status = 'PASS'\nTest_Status = 'FAIL'\nprint(test_status)\nprint(Test_Status)",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "5variable = 5",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "variable5 = 5",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Store test_status, expected_status and browser_name rather than repeating literal values.",
-            "code": "expected_status = 200\nactual_status = 200\nprint(expected_status == actual_status)",
-            "output": "True",
-            "explanation": "Descriptive variables make test expectations and actual results easy to compare."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -444,6 +396,19 @@
           {
             "heading": "What you will learn",
             "body": "How do you assign a variable?. A variable is a label for a value stored in memory. It makes code readable and reusable. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Use = to assign a value. The name is on the left and the value is on the right.\n\nNames may start with a letter or underscore, never a digit; remaining characters may include digits. Python is case-sensitive and keywords like class or if cannot be names.",
+            "code": "name = 'John Doe'\nprint(name)",
+            "output": "John Doe",
+            "explanation": "The equals sign assigns the text John Doe to the variable named name."
+          },
+          {
+            "heading": "Worked example",
+            "code": "name = 'John Doe'\nprint(name)",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -472,6 +437,30 @@
             "body": "What makes a good variable name?. A variable is a label for a value stored in memory. It makes code readable and reusable. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "Reassignment changes what a name refers to. Python infers the type from the value.",
+            "code": "test_status = 'PASS'\nTest_Status = 'FAIL'\nprint(test_status)\nprint(Test_Status)",
+            "output": "PASS\nFAIL",
+            "explanation": "Variable names are case-sensitive. They may contain underscores and digits, but cannot begin with a digit."
+          },
+          {
+            "heading": "Second example",
+            "code": "test_status = 'PASS'\nTest_Status = 'FAIL'\nprint(test_status)\nprint(Test_Status)",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "5variable = 5",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "variable5 = 5",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "test_status = 'PASS'\nprint(test_status)",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -496,6 +485,17 @@
           {
             "heading": "What you will learn",
             "body": "Can a variable change?. A variable is a label for a value stored in memory. It makes code readable and reusable. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Store test_status, expected_status and browser_name rather than repeating literal values.",
+            "code": "expected_status = 200\nactual_status = 200\nprint(expected_status == actual_status)",
+            "output": "True",
+            "explanation": "Descriptive variables make test expectations and actual results easy to compare."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -724,54 +724,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. Every Python value has a type, which controls its operations. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "int stores whole numbers, float stores decimals, str stores text and bool stores True/False.\n\nUse type(value).__name__ to inspect a type. int(), float(), str() and bool() convert values when appropriate.",
-            "code": "age = 25\nprice = 19.99\nname = 'John'\npassed = True\nprint(type(age).__name__)\nprint(type(price).__name__)\nprint(type(name).__name__)\nprint(type(passed).__name__)",
-            "output": "int\nfloat\nstr\nbool",
-            "explanation": "int is a whole number, float has decimals, str is text, and bool is True or False. type() shows the type."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "A string containing digits is not automatically a number. int('5') works; int('five') raises ValueError.",
-            "code": "text_number = '5'\nnumber = int(text_number)\nprint(number + 2)\nprint(type(number).__name__)",
-            "output": "7\nint",
-            "explanation": "Text '5' must be converted to a number before numerical addition. int('five') raises ValueError."
-          },
-          {
-            "heading": "Worked example",
-            "code": "status = 200\nprint(type(status).__name__)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "score = float('4.5')\nprint(score)\nprint(isinstance(score, float))",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "print('5' + 2)",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "print(int('5') + 2)",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "An API response may return a status as an integer and an error message as a string.",
-            "code": "response = {'status': 200, 'message': 'OK'}\nprint(isinstance(response['status'], int))\nprint(isinstance(response['message'], str))",
-            "output": "True\nTrue",
-            "explanation": "QA checks often verify that an API response field has the expected type."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -792,6 +744,19 @@
           {
             "heading": "What you will learn",
             "body": "What are integers and floats?. Every Python value has a type, which controls its operations. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "int stores whole numbers, float stores decimals, str stores text and bool stores True/False.\n\nUse type(value).__name__ to inspect a type. int(), float(), str() and bool() convert values when appropriate.",
+            "code": "age = 25\nprice = 19.99\nname = 'John'\npassed = True\nprint(type(age).__name__)\nprint(type(price).__name__)\nprint(type(name).__name__)\nprint(type(passed).__name__)",
+            "output": "int\nfloat\nstr\nbool",
+            "explanation": "int is a whole number, float has decimals, str is text, and bool is True or False. type() shows the type."
+          },
+          {
+            "heading": "Worked example",
+            "code": "status = 200\nprint(type(status).__name__)",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -820,6 +785,30 @@
             "body": "What are strings and booleans?. Every Python value has a type, which controls its operations. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "A string containing digits is not automatically a number. int('5') works; int('five') raises ValueError.",
+            "code": "text_number = '5'\nnumber = int(text_number)\nprint(number + 2)\nprint(type(number).__name__)",
+            "output": "7\nint",
+            "explanation": "Text '5' must be converted to a number before numerical addition. int('five') raises ValueError."
+          },
+          {
+            "heading": "Second example",
+            "code": "score = float('4.5')\nprint(score)\nprint(isinstance(score, float))",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "print('5' + 2)",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "print(int('5') + 2)",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "print(type('QA').__name__)\nprint(type(True).__name__)",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -843,13 +832,35 @@
         "theorySections": [
           {
             "heading": "What you will learn",
-            "body": "How do you convert data types?. Every Python value has a type, which controls its operations. This is the foundation for the guided workshop and assignments later in this chapter."
+            "body": "Convert a number stored as text into a real number. Learn when to use int(), float(), and str(), and why invalid conversions fail."
           },
           {
-            "heading": "Worked example",
-            "code": "print(int('5') + 1)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+            "heading": "Convert strings into numbers",
+            "body": "API data sometimes contains numbers as text. int('5') creates integer 5; float('4.5') creates decimal 4.5. Once converted, you can calculate with them.",
+            "code": "quantity_text = '5'\nprice_text = '4.50'\nquantity = int(quantity_text)\nprice = float(price_text)\nprint(quantity * price)",
+            "output": "22.5",
+            "explanation": "int() changes '5' to 5 and float() changes '4.50' to 4.5, so multiplication performs arithmetic instead of joining text."
+          },
+          {
+            "heading": "Convert numbers into strings",
+            "body": "Use str() when you need to combine a number with text for a log message.",
+            "code": "status_code = 200\nmessage = 'HTTP ' + str(status_code)\nprint(message)",
+            "output": "HTTP 200",
+            "explanation": "str(200) produces '200', allowing it to be joined with other text."
+          },
+          {
+            "heading": "Common conversion mistakes",
+            "body": "int('4.5') raises ValueError because the string contains a decimal point. int(float('4.5')) produces 4, but loses the fractional part. Also, bool('False') is True because a nonempty string is truthy.",
+            "code": "value = '4.5'\nprint(float(value))\nprint(int(float(value)))\nprint(bool('False'))",
+            "output": "4.5\n4\nTrue",
+            "explanation": "Choose conversions based on the meaning of the data; never assume a nonempty string containing 'False' converts to False."
+          },
+          {
+            "heading": "QA practice: validate a numeric API field",
+            "body": "An API response contains a quantity as text. Convert it and check that it meets the minimum expected quantity.",
+            "code": "response = {'quantity': '12'}\nquantity = int(response['quantity'])\nprint(quantity >= 10)",
+            "output": "True",
+            "explanation": "Converting the string to an integer makes a meaningful numeric comparison possible."
           }
         ]
       },
@@ -1076,54 +1087,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A string is an ordered sequence of characters written between single or double quotes. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Index positions begin at 0; negative indexes count from the end. Strings cannot be changed in place (immutability).\n\nSlicing text[start:end] includes start but excludes end. strip(), lower(), upper(), replace() and split() return useful results.",
-            "code": "text = 'Python'\nprint(text[0])\nprint(text[0:3])\nprint(text.lower())",
-            "output": "P\nPyt\npython",
-            "explanation": "Index 0 is the first character. A slice stops before the end index. lower() returns lowercase text."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Use f-strings such as f'Test: {name}' to insert variable values.",
-            "code": "name = '  John  '\nprint(name.strip())\nprint(len(name.strip()))",
-            "output": "John\n4",
-            "explanation": "strip() removes spaces at the beginning and end. Strings are immutable, so methods return new strings."
-          },
-          {
-            "heading": "Worked example",
-            "code": "name = 'John Doe'\nprint(name[0])",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "text = '  Login PASS  '\nprint(text.strip().lower())\nprint(text[0:4])",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "name = 'QA'\nname[0] = 'X'",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "name = 'X' + name[1:]",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Normalize usernames, check response messages and format readable test logs.",
-            "code": "username = '  ADMIN '\nprint(username.strip().lower() == 'admin')",
-            "output": "True",
-            "explanation": "QA code can normalize user input before comparing expected and actual text."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -1144,6 +1107,19 @@
           {
             "heading": "What you will learn",
             "body": "What is string indexing?. A string is an ordered sequence of characters written between single or double quotes. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Index positions begin at 0; negative indexes count from the end. Strings cannot be changed in place (immutability).\n\nSlicing text[start:end] includes start but excludes end. strip(), lower(), upper(), replace() and split() return useful results.",
+            "code": "text = 'Python'\nprint(text[0])\nprint(text[0:3])\nprint(text.lower())",
+            "output": "P\nPyt\npython",
+            "explanation": "Index 0 is the first character. A slice stops before the end index. lower() returns lowercase text."
+          },
+          {
+            "heading": "Worked example",
+            "code": "name = 'John Doe'\nprint(name[0])",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -1172,6 +1148,30 @@
             "body": "What is string slicing?. A string is an ordered sequence of characters written between single or double quotes. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "Use f-strings such as f'Test: {name}' to insert variable values.",
+            "code": "name = '  John  '\nprint(name.strip())\nprint(len(name.strip()))",
+            "output": "John\n4",
+            "explanation": "strip() removes spaces at the beginning and end. Strings are immutable, so methods return new strings."
+          },
+          {
+            "heading": "Second example",
+            "code": "text = '  Login PASS  '\nprint(text.strip().lower())\nprint(text[0:4])",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "name = 'QA'\nname[0] = 'X'",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "name = 'X' + name[1:]",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "print('Python'[0:3])",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -1196,6 +1196,17 @@
           {
             "heading": "What you will learn",
             "body": "What are common string methods?. A string is an ordered sequence of characters written between single or double quotes. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Normalize usernames, check response messages and format readable test logs.",
+            "code": "username = '  ADMIN '\nprint(username.strip().lower() == 'admin')",
+            "output": "True",
+            "explanation": "QA code can normalize user input before comparing expected and actual text."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -1424,54 +1435,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. Operators combine values and create conditions. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Arithmetic: +, -, *, /, //, %, **. Comparisons: ==, !=, <, >, <=, >=.\n\nUse and when both conditions must hold, or when either is enough, and not to reverse a boolean.",
-            "code": "print(7 + 3)\nprint(7 > 3)\nprint(7 == 3)",
-            "output": "10\nTrue\nFalse",
-            "explanation": "+ performs addition, > compares size, and == checks equality."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "= assigns a value; == compares values. Parentheses make complex expressions easier to read.",
-            "code": "status = 200\nseconds = 2\nprint(status == 200 and seconds < 3)",
-            "output": "True",
-            "explanation": "and requires both conditions to be true. Use == for comparisons, not =."
-          },
-          {
-            "heading": "Worked example",
-            "code": "print(10 // 3)\nprint(10 % 3)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "status = 200\nseconds = 2\nprint(status == 200 and seconds < 3)",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "print(200 = 200)",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "print(200 == 200)",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "A QA test might require HTTP 200 and response time below 3 seconds.",
-            "code": "status = 200\nresponse_time = 1.5\nprint(status == 200 and response_time < 3)",
-            "output": "True",
-            "explanation": "A test can require both a correct status and an acceptable response time."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -1492,6 +1455,19 @@
           {
             "heading": "What you will learn",
             "body": "How do arithmetic operators work?. Operators combine values and create conditions. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Arithmetic: +, -, *, /, //, %, **. Comparisons: ==, !=, <, >, <=, >=.\n\nUse and when both conditions must hold, or when either is enough, and not to reverse a boolean.",
+            "code": "print(7 + 3)\nprint(7 > 3)\nprint(7 == 3)",
+            "output": "10\nTrue\nFalse",
+            "explanation": "+ performs addition, > compares size, and == checks equality."
+          },
+          {
+            "heading": "Worked example",
+            "code": "print(10 // 3)\nprint(10 % 3)",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -1520,6 +1496,30 @@
             "body": "How do comparisons work?. Operators combine values and create conditions. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "= assigns a value; == compares values. Parentheses make complex expressions easier to read.",
+            "code": "status = 200\nseconds = 2\nprint(status == 200 and seconds < 3)",
+            "output": "True",
+            "explanation": "and requires both conditions to be true. Use == for comparisons, not =."
+          },
+          {
+            "heading": "Second example",
+            "code": "status = 200\nseconds = 2\nprint(status == 200 and seconds < 3)",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "print(200 = 200)",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "print(200 == 200)",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "print(200 == 200)",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -1544,6 +1544,17 @@
           {
             "heading": "What you will learn",
             "body": "How do boolean operators work?. Operators combine values and create conditions. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "A QA test might require HTTP 200 and response time below 3 seconds.",
+            "code": "status = 200\nresponse_time = 1.5\nprint(status == 200 and response_time < 3)",
+            "output": "True",
+            "explanation": "A test can require both a correct status and an acceptable response time."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -1772,54 +1783,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A list is an ordered, mutable collection written with square brackets. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Indexes begin at zero. Negative indexes count from the end; slices select ranges.\n\nappend adds an item; remove deletes one matching item; len counts items; count counts occurrences.",
-            "code": "tests = ['login', 'search']\nprint(tests[0])\nprint(len(tests))",
-            "output": "login\n2",
-            "explanation": "Lists keep values in order. Indexing begins at zero, and len() counts items."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "A tuple uses parentheses and cannot be modified after creation. Use tuples for fixed data.",
-            "code": "tests = ['login']\ntests.append('search')\nprint(tests)\nprint(tests[-1])",
-            "output": "['login', 'search']\nsearch",
-            "explanation": "append() changes a list. Index -1 refers to its last item."
-          },
-          {
-            "heading": "Worked example",
-            "code": "tests = ['login', 'search']\nprint(tests[0])",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "tests.append('logout')\nprint(len(tests))\nprint(tests[-1])",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "tests[10]",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "tests[0]",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Keep lists of test cases and count PASS or FAIL outcomes.",
-            "code": "results = ['PASS', 'FAIL', 'PASS']\nprint(results.count('FAIL'))",
-            "output": "1",
-            "explanation": "A QA report can count failed test cases using a list method."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -1840,6 +1803,19 @@
           {
             "heading": "What you will learn",
             "body": "What is list indexing?. A list is an ordered, mutable collection written with square brackets. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Indexes begin at zero. Negative indexes count from the end; slices select ranges.\n\nappend adds an item; remove deletes one matching item; len counts items; count counts occurrences.",
+            "code": "tests = ['login', 'search']\nprint(tests[0])\nprint(len(tests))",
+            "output": "login\n2",
+            "explanation": "Lists keep values in order. Indexing begins at zero, and len() counts items."
+          },
+          {
+            "heading": "Worked example",
+            "code": "tests = ['login', 'search']\nprint(tests[0])",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           }
         ]
       },
@@ -1860,6 +1836,30 @@
           {
             "heading": "What you will learn",
             "body": "How do list methods work?. A list is an ordered, mutable collection written with square brackets. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Rules and important details",
+            "body": "A tuple uses parentheses and cannot be modified after creation. Use tuples for fixed data.",
+            "code": "tests = ['login']\ntests.append('search')\nprint(tests)\nprint(tests[-1])",
+            "output": "['login', 'search']\nsearch",
+            "explanation": "append() changes a list. Index -1 refers to its last item."
+          },
+          {
+            "heading": "Second example",
+            "code": "tests.append('logout')\nprint(len(tests))\nprint(tests[-1])",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "tests[10]",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "tests[0]",
+            "body": "Run the corrected code and explain why the error is resolved."
           },
           {
             "heading": "Worked example",
@@ -1886,6 +1886,17 @@
           {
             "heading": "What you will learn",
             "body": "What is list slicing?. A list is an ordered, mutable collection written with square brackets. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Keep lists of test cases and count PASS or FAIL outcomes.",
+            "code": "results = ['PASS', 'FAIL', 'PASS']\nprint(results.count('FAIL'))",
+            "output": "1",
+            "explanation": "A QA report can count failed test cases using a list method."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -2114,54 +2125,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A dictionary stores key-value pairs and lets you retrieve data by key. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Write {'status': 200}; read data['status']; update data['status'] = 201.\n\nUse get('key', default) for optional values. keys(), values() and items() help explore dictionaries.",
-            "code": "response = {'status': 200, 'message': 'OK'}\nprint(response['status'])\nprint(response['message'])",
-            "output": "200\nOK",
-            "explanation": "Dictionaries store values under named keys. Square brackets retrieve a value."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Nested dictionaries contain dictionaries as values. JSON objects become Python dictionaries after json.loads().",
-            "code": "response = {'status': 200}\nresponse['status'] = 201\nprint(response.get('message', 'unknown'))\nprint(response['status'])",
-            "output": "unknown\n201",
-            "explanation": "Assigning to an existing key updates it. get() supplies a fallback for a missing key."
-          },
-          {
-            "heading": "Worked example",
-            "code": "response = {'status': 200, 'message': 'OK'}\nprint(response['status'])",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "response['passed'] = True\nprint(response.get('missing', 'unknown'))",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "print(response['missing'])",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "print(response.get('missing', 'unknown'))",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Inspect API response fields like status, message and user.id.",
-            "code": "response = {'user': {'id': 42}, 'status': 200}\nprint(response['user']['id'])",
-            "output": "42",
-            "explanation": "API JSON often contains nested objects; Python dictionaries can represent them."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -2182,6 +2145,19 @@
           {
             "heading": "What you will learn",
             "body": "What are dictionary keys and values?. A dictionary stores key-value pairs and lets you retrieve data by key. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Write {'status': 200}; read data['status']; update data['status'] = 201.\n\nUse get('key', default) for optional values. keys(), values() and items() help explore dictionaries.",
+            "code": "response = {'status': 200, 'message': 'OK'}\nprint(response['status'])\nprint(response['message'])",
+            "output": "200\nOK",
+            "explanation": "Dictionaries store values under named keys. Square brackets retrieve a value."
+          },
+          {
+            "heading": "Worked example",
+            "code": "response = {'status': 200, 'message': 'OK'}\nprint(response['status'])",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -2210,6 +2186,30 @@
             "body": "How do you update a dictionary?. A dictionary stores key-value pairs and lets you retrieve data by key. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "Nested dictionaries contain dictionaries as values. JSON objects become Python dictionaries after json.loads().",
+            "code": "response = {'status': 200}\nresponse['status'] = 201\nprint(response.get('message', 'unknown'))\nprint(response['status'])",
+            "output": "unknown\n201",
+            "explanation": "Assigning to an existing key updates it. get() supplies a fallback for a missing key."
+          },
+          {
+            "heading": "Second example",
+            "code": "response['passed'] = True\nprint(response.get('missing', 'unknown'))",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "print(response['missing'])",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "print(response.get('missing', 'unknown'))",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "test = {'status': 404}\ntest['status'] = 200\nprint(test['status'])",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -2234,6 +2234,17 @@
           {
             "heading": "What you will learn",
             "body": "What does .get() do?. A dictionary stores key-value pairs and lets you retrieve data by key. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Inspect API response fields like status, message and user.id.",
+            "code": "response = {'user': {'id': 42}, 'status': 200}\nprint(response['user']['id'])",
+            "output": "42",
+            "explanation": "API JSON often contains nested objects; Python dictionaries can represent them."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -2462,54 +2473,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. Conditions choose which code runs based on True/False expressions. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Use if condition: followed by an indented block. elif checks another condition and else is the fallback.\n\nOnly the first matching branch of an if/elif/else chain runs.",
-            "code": "status = 200\nif status == 200:\n    print('PASS')\nelse:\n    print('FAIL')",
-            "output": "PASS",
-            "explanation": "if checks a condition. The indented block runs when it is true; otherwise else runs."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Use == for equality, not =. Keep indentation consistent (normally four spaces).",
-            "code": "status = 201\nif status == 200:\n    print('OK')\nelif status == 201:\n    print('Created')\nelse:\n    print('Other')",
-            "output": "Created",
-            "explanation": "elif checks an additional condition. Only the first matching branch executes."
-          },
-          {
-            "heading": "Worked example",
-            "code": "status = 200\nif status == 200:\n    print('PASS')",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "status = 404\nif status == 200:\n    print('PASS')\nelse:\n    print('FAIL')",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "if status = 200:\n    print('PASS')",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "if status == 200:\n    print('PASS')",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Classify response codes as PASS, FAIL or RETRY.",
-            "code": "status = 404\nif status >= 400:\n    print('API error')",
-            "output": "API error",
-            "explanation": "Conditional checks classify API responses and produce meaningful test results."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -2530,6 +2493,19 @@
           {
             "heading": "What you will learn",
             "body": "What does if do?. Conditions choose which code runs based on True/False expressions. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Use if condition: followed by an indented block. elif checks another condition and else is the fallback.\n\nOnly the first matching branch of an if/elif/else chain runs.",
+            "code": "status = 200\nif status == 200:\n    print('PASS')\nelse:\n    print('FAIL')",
+            "output": "PASS",
+            "explanation": "if checks a condition. The indented block runs when it is true; otherwise else runs."
+          },
+          {
+            "heading": "Worked example",
+            "code": "status = 200\nif status == 200:\n    print('PASS')",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           }
         ]
       },
@@ -2550,6 +2526,30 @@
           {
             "heading": "What you will learn",
             "body": "How does else work?. Conditions choose which code runs based on True/False expressions. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Rules and important details",
+            "body": "Use == for equality, not =. Keep indentation consistent (normally four spaces).",
+            "code": "status = 201\nif status == 200:\n    print('OK')\nelif status == 201:\n    print('Created')\nelse:\n    print('Other')",
+            "output": "Created",
+            "explanation": "elif checks an additional condition. Only the first matching branch executes."
+          },
+          {
+            "heading": "Second example",
+            "code": "status = 404\nif status == 200:\n    print('PASS')\nelse:\n    print('FAIL')",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "if status = 200:\n    print('PASS')",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "if status == 200:\n    print('PASS')",
+            "body": "Run the corrected code and explain why the error is resolved."
           },
           {
             "heading": "Worked example",
@@ -2576,6 +2576,17 @@
           {
             "heading": "What you will learn",
             "body": "When do you use elif?. Conditions choose which code runs based on True/False expressions. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Classify response codes as PASS, FAIL or RETRY.",
+            "code": "status = 404\nif status >= 400:\n    print('API error')",
+            "output": "API error",
+            "explanation": "Conditional checks classify API responses and produce meaningful test results."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -2804,54 +2815,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A for loop repeats a block for each item in a sequence. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Use for item in items: and indent the body. range(n) produces 0 through n-1.\n\nenumerate() gives an index and value. break stops early; continue skips to the next iteration.",
-            "code": "for name in ['login', 'search']:\n    print(name)",
-            "output": "login\nsearch",
-            "explanation": "A for loop runs its indented body once for each list item."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Counters can accumulate results; initialize the counter before the loop.",
-            "code": "for index in range(3):\n    print(index)",
-            "output": "0\n1\n2",
-            "explanation": "range(3) produces 0, 1 and 2. It does not include 3."
-          },
-          {
-            "heading": "Worked example",
-            "code": "for test in ['login', 'search']:\n    print(test)",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "failed = 0\nfor result in ['PASS','FAIL']:\n    if result == 'FAIL':\n        failed += 1\nprint(failed)",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "for test in ['login']\n    print(test)",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "for test in ['login']:\n    print(test)",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Run the same assertion over many test results and count failures.",
-            "code": "failures = 0\nfor result in ['PASS', 'FAIL', 'FAIL']:\n    if result == 'FAIL':\n        failures += 1\nprint(failures)",
-            "output": "2",
-            "explanation": "A loop can process many test results and count failures."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -2872,6 +2835,19 @@
           {
             "heading": "What you will learn",
             "body": "How does a for loop work?. A for loop repeats a block for each item in a sequence. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Use for item in items: and indent the body. range(n) produces 0 through n-1.\n\nenumerate() gives an index and value. break stops early; continue skips to the next iteration.",
+            "code": "for name in ['login', 'search']:\n    print(name)",
+            "output": "login\nsearch",
+            "explanation": "A for loop runs its indented body once for each list item."
+          },
+          {
+            "heading": "Worked example",
+            "code": "for test in ['login', 'search']:\n    print(test)",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -2900,6 +2876,30 @@
             "body": "How does range() work?. A for loop repeats a block for each item in a sequence. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "Counters can accumulate results; initialize the counter before the loop.",
+            "code": "for index in range(3):\n    print(index)",
+            "output": "0\n1\n2",
+            "explanation": "range(3) produces 0, 1 and 2. It does not include 3."
+          },
+          {
+            "heading": "Second example",
+            "code": "failed = 0\nfor result in ['PASS','FAIL']:\n    if result == 'FAIL':\n        failed += 1\nprint(failed)",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "for test in ['login']\n    print(test)",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "for test in ['login']:\n    print(test)",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "for i in range(3):\n    print(i)",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -2924,6 +2924,17 @@
           {
             "heading": "What you will learn",
             "body": "How can loops count failures?. A for loop repeats a block for each item in a sequence. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Run the same assertion over many test results and count failures.",
+            "code": "failures = 0\nfor result in ['PASS', 'FAIL', 'FAIL']:\n    if result == 'FAIL':\n        failures += 1\nprint(failures)",
+            "output": "2",
+            "explanation": "A loop can process many test results and count failures."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -3152,54 +3163,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. A while loop repeats while its condition is True. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Always change something inside the loop so it can finish; a retry counter is a common approach.\n\nUse a maximum attempts value, and optionally break after success.",
-            "code": "attempt = 1\nwhile attempt <= 3:\n    print(attempt)\n    attempt += 1",
-            "output": "1\n2\n3",
-            "explanation": "A while loop repeats while its condition is true. The counter changes on each pass."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "An endless loop can freeze a program. Check the condition and counter when debugging.",
-            "code": "attempt = 0\nwhile attempt < 2:\n    attempt += 1\nprint('Finished:', attempt)",
-            "output": "Finished: 2",
-            "explanation": "A changing counter prevents an infinite loop."
-          },
-          {
-            "heading": "Worked example",
-            "code": "attempt = 1\nwhile attempt <= 3:\n    print(attempt)\n    attempt += 1",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "attempt = 0\nwhile attempt < 3:\n    attempt += 1\nprint(attempt)",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "while True:\n    print('retry')",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "attempt = 0\nwhile attempt < 3:\n    attempt += 1",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Retry a temporary failure up to three times without waiting forever.",
-            "code": "attempt = 0\nsuccess = False\nwhile attempt < 3 and not success:\n    attempt += 1\n    success = attempt == 2\nprint('Attempts:', attempt)",
-            "output": "Attempts: 2",
-            "explanation": "Retry logic stops when the operation succeeds or the attempt limit is reached."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -3220,6 +3183,19 @@
           {
             "heading": "What you will learn",
             "body": "How does while work?. A while loop repeats while its condition is True. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Always change something inside the loop so it can finish; a retry counter is a common approach.\n\nUse a maximum attempts value, and optionally break after success.",
+            "code": "attempt = 1\nwhile attempt <= 3:\n    print(attempt)\n    attempt += 1",
+            "output": "1\n2\n3",
+            "explanation": "A while loop repeats while its condition is true. The counter changes on each pass."
+          },
+          {
+            "heading": "Worked example",
+            "code": "attempt = 1\nwhile attempt <= 3:\n    print(attempt)\n    attempt += 1",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           },
           {
             "heading": "Worked example",
@@ -3248,6 +3224,30 @@
             "body": "How do retry limits work?. A while loop repeats while its condition is True. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Rules and important details",
+            "body": "An endless loop can freeze a program. Check the condition and counter when debugging.",
+            "code": "attempt = 0\nwhile attempt < 2:\n    attempt += 1\nprint('Finished:', attempt)",
+            "output": "Finished: 2",
+            "explanation": "A changing counter prevents an infinite loop."
+          },
+          {
+            "heading": "Second example",
+            "code": "attempt = 0\nwhile attempt < 3:\n    attempt += 1\nprint(attempt)",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "while True:\n    print('retry')",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "attempt = 0\nwhile attempt < 3:\n    attempt += 1",
+            "body": "Run the corrected code and explain why the error is resolved."
+          },
+          {
             "heading": "Worked example",
             "code": "attempt = 0\nwhile attempt < 3:\n    attempt += 1\nprint(attempt)",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -3272,6 +3272,17 @@
           {
             "heading": "What you will learn",
             "body": "When should you use break?. A while loop repeats while its condition is True. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Retry a temporary failure up to three times without waiting forever.",
+            "code": "attempt = 0\nsuccess = False\nwhile attempt < 3 and not success:\n    attempt += 1\n    success = attempt == 2\nprint('Attempts:', attempt)",
+            "output": "Attempts: 2",
+            "explanation": "Retry logic stops when the operation succeeds or the attempt limit is reached."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           },
           {
             "heading": "Worked example",
@@ -3496,6 +3507,51 @@
         "expected": "Hello QA",
         "hint": "Call the function after defining it.",
         "qa": "Reuse validation logic across many test cases.",
+        "theorySections": []
+      },
+      {
+        "id": "11-theory-1",
+        "title": "How do you define a function?",
+        "type": "reading",
+        "intro": "Learn: How do you define a function? This idea is used in the exercises below.",
+        "concept": "Why do we need functions?: Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.\n\nDefine and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.",
+        "example": "print(200 == 200)\nprint(404 == 200)",
+        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
+        "starter": "def greet():\n    print('Hello')\ngreet()",
+        "solution": "def greet():\n    print('Hello')\ngreet()",
+        "expected": "Run the example",
+        "hint": "Compare the code with the explanation above.",
+        "qa": "Apply this skill to simple test data and QA results.",
+        "theorySections": []
+      },
+      {
+        "id": "11-theory-2",
+        "title": "What are parameters and arguments?",
+        "type": "reading",
+        "intro": "Learn: What are parameters and arguments? This idea is used in the exercises below.",
+        "concept": "Define and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.",
+        "example": "def greet():\n    print('Hello QA')\n\ngreet()",
+        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
+        "starter": "def show(name):\n    print(name)\nshow('Login')",
+        "solution": "def show(name):\n    print(name)\nshow('Login')",
+        "expected": "Run the example",
+        "hint": "Compare the code with the explanation above.",
+        "qa": "Apply this skill to simple test data and QA results.",
+        "theorySections": []
+      },
+      {
+        "id": "11-theory-3",
+        "title": "What does return do?",
+        "type": "reading",
+        "intro": "Learn: What does return do? This idea is used in the exercises below.",
+        "concept": "Parameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.\n\nCommon mistakes: Remember the colon after def, indent the function body, and call the function after defining it.",
+        "example": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
+        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
+        "starter": "def passed(status):\n    return status == 200\nprint(passed(200))",
+        "solution": "def passed(status):\n    return status == 200\nprint(passed(200))",
+        "expected": "Run the example",
+        "hint": "Compare the code with the explanation above.",
+        "qa": "Apply this skill to simple test data and QA results.",
         "theorySections": [
           {
             "heading": "Why do we need functions?",
@@ -3551,51 +3607,6 @@
             "body": "1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?"
           }
         ]
-      },
-      {
-        "id": "11-theory-1",
-        "title": "How do you define a function?",
-        "type": "reading",
-        "intro": "Learn: How do you define a function? This idea is used in the exercises below.",
-        "concept": "Why do we need functions?: Without functions, repeated QA checks need repeated code. A function lets you write a check once and reuse it.\n\nDefine and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.",
-        "example": "print(200 == 200)\nprint(404 == 200)",
-        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
-        "starter": "def greet():\n    print('Hello')\ngreet()",
-        "solution": "def greet():\n    print('Hello')\ngreet()",
-        "expected": "Run the example",
-        "hint": "Compare the code with the explanation above.",
-        "qa": "Apply this skill to simple test data and QA results.",
-        "theorySections": []
-      },
-      {
-        "id": "11-theory-2",
-        "title": "What are parameters and arguments?",
-        "type": "reading",
-        "intro": "Learn: What are parameters and arguments? This idea is used in the exercises below.",
-        "concept": "Define and call a function: def starts a function definition. The indented lines belong to the function. The function runs only when you call its name with parentheses.\n\nParameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.",
-        "example": "def greet():\n    print('Hello QA')\n\ngreet()",
-        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
-        "starter": "def show(name):\n    print(name)\nshow('Login')",
-        "solution": "def show(name):\n    print(name)\nshow('Login')",
-        "expected": "Run the example",
-        "hint": "Compare the code with the explanation above.",
-        "qa": "Apply this skill to simple test data and QA results.",
-        "theorySections": []
-      },
-      {
-        "id": "11-theory-3",
-        "title": "What does return do?",
-        "type": "reading",
-        "intro": "Learn: What does return do? This idea is used in the exercises below.",
-        "concept": "Parameters versus arguments: A parameter is a placeholder in the definition; an argument is the actual value passed when calling the function.\n\nReturn versus print: print displays a result. return gives a result back to the caller so other code can use it.\n\nDefault parameters: A default parameter supplies a value when the caller does not pass one.\n\nCommon mistakes: Remember the colon after def, indent the function body, and call the function after defining it.",
-        "example": "def show_test(name):\n    print('Testing', name)\n\nshow_test('Login')\nshow_test('Search')",
-        "instructions": "Run the worked example, explain what each line does, and mark as read before the assignments.",
-        "starter": "def passed(status):\n    return status == 200\nprint(passed(200))",
-        "solution": "def passed(status):\n    return status == 200\nprint(passed(200))",
-        "expected": "Run the example",
-        "hint": "Compare the code with the explanation above.",
-        "qa": "Apply this skill to simple test data and QA results.",
-        "theorySections": []
       },
       {
         "id": "11-guided",
@@ -3793,54 +3804,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. An exception is a runtime error that interrupts normal execution. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Put potentially failing code inside try; handle expected failures with except ValueError or except KeyError.\n\nelse runs if no exception occurs; finally runs whether or not an exception occurred.",
-            "code": "try:\n    number = int('abc')\nexcept ValueError:\n    print('Invalid number')",
-            "output": "Invalid number",
-            "explanation": "try runs code that may fail. except ValueError handles an invalid number conversion."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "Catch specific exceptions. A bare except can hide real bugs.",
-            "code": "try:\n    number = int('10')\nexcept ValueError:\n    print('Invalid')\nelse:\n    print('Valid:', number)\nfinally:\n    print('Finished')",
-            "output": "Valid: 10\nFinished",
-            "explanation": "else runs after a successful try, while finally runs regardless of an exception."
-          },
-          {
-            "heading": "Worked example",
-            "code": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "try:\n    print(int('200'))\nexcept ValueError:\n    print('Invalid')\nfinally:\n    print('Done')",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "int('abc')",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid')",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Report invalid test data clearly without hiding unexpected failures.",
-            "code": "data = {'status': 200}\ntry:\n    print(data['message'])\nexcept KeyError:\n    print('Missing API field')",
-            "output": "Missing API field",
-            "explanation": "A specific exception handler can report missing API fields clearly."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -3877,6 +3840,19 @@
             "body": "What is a Python exception?. An exception is a runtime error that interrupts normal execution. This is the foundation for the guided workshop and assignments later in this chapter."
           },
           {
+            "heading": "Core concept explained",
+            "body": "Put potentially failing code inside try; handle expected failures with except ValueError or except KeyError.\n\nelse runs if no exception occurs; finally runs whether or not an exception occurred.",
+            "code": "try:\n    number = int('abc')\nexcept ValueError:\n    print('Invalid number')",
+            "output": "Invalid number",
+            "explanation": "try runs code that may fail. except ValueError handles an invalid number conversion."
+          },
+          {
+            "heading": "Worked example",
+            "code": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid number')",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
             "heading": "Worked example",
             "code": "try:\n    number = int('abc')\nexcept ValueError:\n    print('Invalid number')",
             "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
@@ -3901,6 +3877,30 @@
           {
             "heading": "What you will learn",
             "body": "How do try and except work?. An exception is a runtime error that interrupts normal execution. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Rules and important details",
+            "body": "Catch specific exceptions. A bare except can hide real bugs.",
+            "code": "try:\n    number = int('10')\nexcept ValueError:\n    print('Invalid')\nelse:\n    print('Valid:', number)\nfinally:\n    print('Finished')",
+            "output": "Valid: 10\nFinished",
+            "explanation": "else runs after a successful try, while finally runs regardless of an exception."
+          },
+          {
+            "heading": "Second example",
+            "code": "try:\n    print(int('200'))\nexcept ValueError:\n    print('Invalid')\nfinally:\n    print('Done')",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "int('abc')",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "try:\n    int('abc')\nexcept ValueError:\n    print('Invalid')",
+            "body": "Run the corrected code and explain why the error is resolved."
           }
         ]
       },
@@ -3921,6 +3921,17 @@
           {
             "heading": "What you will learn",
             "body": "What are else and finally?. An exception is a runtime error that interrupts normal execution. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Report invalid test data clearly without hiding unexpected failures.",
+            "code": "data = {'status': 200}\ntry:\n    print(data['message'])\nexcept KeyError:\n    print('Missing API field')",
+            "output": "Missing API field",
+            "explanation": "A specific exception handler can report missing API fields clearly."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -4088,54 +4099,6 @@
           {
             "heading": "What you will learn",
             "body": "Overview and vocabulary. Files preserve information outside your running Python variables. This is the foundation for the guided workshop and assignments later in this chapter."
-          },
-          {
-            "heading": "Core concept explained",
-            "body": "Use with open(path, 'r') to read and with open(path, 'w') to write; with closes files automatically.\n\nJSON is a text format. json.loads() parses JSON text into Python values; json.dumps() serializes values to JSON.",
-            "code": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
-            "output": "200",
-            "explanation": "json.loads() converts JSON text into Python data, such as a dictionary."
-          },
-          {
-            "heading": "Rules and important details",
-            "body": "JSON uses lowercase true/false/null; Python uses True/False/None. Handle missing files and invalid JSON.",
-            "code": "import json\nprint(json.dumps({'passed': True}))",
-            "output": "{\"passed\": true}",
-            "explanation": "json.dumps() converts Python data to JSON text. JSON writes booleans as true and false."
-          },
-          {
-            "heading": "Worked example",
-            "code": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
-            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Second example",
-            "code": "from io import StringIO\nfile = StringIO('PASS\\nFAIL')\nprint(file.readline().strip())",
-            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
-            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
-          },
-          {
-            "heading": "Common mistake and correction",
-            "code": "import json\njson.loads('{status: 200}')",
-            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
-            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
-          },
-          {
-            "heading": "Corrected code",
-            "code": "import json\njson.loads('{\"status\": 200}')",
-            "body": "Run the corrected code and explain why the error is resolved."
-          },
-          {
-            "heading": "How QA engineers use this",
-            "body": "Read test data from files and validate JSON API responses.",
-            "code": "import json\nresponse = json.loads('{\"status\": 201, \"id\": 7}')\nprint(response['status'] == 201)\nprint(response['id'])",
-            "output": "True\n7",
-            "explanation": "QA engineers parse JSON to check expected response fields."
-          },
-          {
-            "heading": "Check your understanding",
-            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -4170,6 +4133,19 @@
           {
             "heading": "What you will learn",
             "body": "What is JSON?. Files preserve information outside your running Python variables. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Core concept explained",
+            "body": "Use with open(path, 'r') to read and with open(path, 'w') to write; with closes files automatically.\n\nJSON is a text format. json.loads() parses JSON text into Python values; json.dumps() serializes values to JSON.",
+            "code": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+            "output": "200",
+            "explanation": "json.loads() converts JSON text into Python data, such as a dictionary."
+          },
+          {
+            "heading": "Worked example",
+            "code": "import json\nresponse = json.loads('{\"status\": 200}')\nprint(response['status'])",
+            "body": "Read each statement from top to bottom. Predict what Python prints, then run the example in the editor. Identify which part creates the value and which part displays or checks it.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
           }
         ]
       },
@@ -4190,6 +4166,30 @@
           {
             "heading": "What you will learn",
             "body": "How does json.loads work?. Files preserve information outside your running Python variables. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "Rules and important details",
+            "body": "JSON uses lowercase true/false/null; Python uses True/False/None. Handle missing files and invalid JSON.",
+            "code": "import json\nprint(json.dumps({'passed': True}))",
+            "output": "{\"passed\": true}",
+            "explanation": "json.dumps() converts Python data to JSON text. JSON writes booleans as true and false."
+          },
+          {
+            "heading": "Second example",
+            "code": "from io import StringIO\nfile = StringIO('PASS\\nFAIL')\nprint(file.readline().strip())",
+            "body": "This example builds on the first one. Change one value and observe what happens. Compare the new output to your prediction.",
+            "explanation": "Trace the code line by line. Change one value, run it again, and compare the result."
+          },
+          {
+            "heading": "Common mistake and correction",
+            "code": "import json\njson.loads('{status: 200}')",
+            "body": "Incorrect example: read this code and identify why it fails. The next code block shows a corrected version.",
+            "explanation": "This example is intentionally incorrect. Identify the error before reading the corrected code."
+          },
+          {
+            "heading": "Corrected code",
+            "code": "import json\njson.loads('{\"status\": 200}')",
+            "body": "Run the corrected code and explain why the error is resolved."
           }
         ]
       },
@@ -4210,6 +4210,17 @@
           {
             "heading": "What you will learn",
             "body": "How does json.dumps work?. Files preserve information outside your running Python variables. This is the foundation for the guided workshop and assignments later in this chapter."
+          },
+          {
+            "heading": "How QA engineers use this",
+            "body": "Read test data from files and validate JSON API responses.",
+            "code": "import json\nresponse = json.loads('{\"status\": 201, \"id\": 7}')\nprint(response['status'] == 201)\nprint(response['id'])",
+            "output": "True\n7",
+            "explanation": "QA engineers parse JSON to check expected response fields."
+          },
+          {
+            "heading": "Check your understanding",
+            "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
       },
@@ -4373,6 +4384,65 @@
         "expected": "Example only",
         "hint": "Read the example before practising.",
         "qa": "Page objects and reusable test helpers organize real QA automation.",
+        "theorySections": []
+      },
+      {
+        "id": "14-guided",
+        "title": "Guided lab: Object-Oriented Programming (OOP)",
+        "type": "exercise",
+        "intro": "A guided practice step using the code already explained in this chapter.",
+        "concept": "First read the code line by line:\nclass TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "instructions": "Guided experiment for a test case model: read the worked example, predict its output before running it, then recreate it with your own comments. Change one input and explain what changes. Restore the required output to finish this lab.",
+        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
+        "solution": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "expected": "TestCase",
+        "hint": "Start by copying the first line of the worked example: class TestCase:",
+        "qa": "Guided workshops prepare you for independent assignments."
+      },
+      {
+        "id": "14-theory-1",
+        "title": "What are classes and objects?",
+        "type": "reading",
+        "intro": "What are classes and objects?. Learn the idea, study the worked example, and then try it yourself.",
+        "concept": "What is OOP?: Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.\n\nClass versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.",
+        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
+        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
+        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "expected": "Example only",
+        "hint": "Run the example and identify the new keyword.",
+        "qa": "Page objects and reusable test helpers organize real QA automation.",
+        "theorySections": []
+      },
+      {
+        "id": "14-theory-2",
+        "title": "What are __init__ and self?",
+        "type": "reading",
+        "intro": "What are __init__ and self?. Learn the idea, study the worked example, and then try it yourself.",
+        "concept": "Class versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.",
+        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
+        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
+        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "expected": "Example only",
+        "hint": "Run the example and identify the new keyword.",
+        "qa": "Page objects and reusable test helpers organize real QA automation.",
+        "theorySections": []
+      },
+      {
+        "id": "14-theory-3",
+        "title": "What are attributes?",
+        "type": "reading",
+        "intro": "What are attributes?. Learn the idea, study the worked example, and then try it yourself.",
+        "concept": "Constructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.\n\nInheritance: Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
+        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
+        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
+        "expected": "Example only",
+        "hint": "Run the example and identify the new keyword.",
+        "qa": "Page objects and reusable test helpers organize real QA automation.",
         "theorySections": [
           {
             "heading": "What is OOP?",
@@ -4442,65 +4512,6 @@
             "body": "1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?"
           }
         ]
-      },
-      {
-        "id": "14-guided",
-        "title": "Guided lab: Object-Oriented Programming (OOP)",
-        "type": "exercise",
-        "intro": "A guided practice step using the code already explained in this chapter.",
-        "concept": "First read the code line by line:\nclass TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)\n\nThen copy the same pattern into the editor. Change only what the task asks. No new syntax is required.",
-        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
-        "instructions": "Guided experiment for a test case model: read the worked example, predict its output before running it, then recreate it with your own comments. Change one input and explain what changes. Restore the required output to finish this lab.",
-        "starter": "# Guided workshop: follow the example\n# Recreate the example you just studied\n",
-        "solution": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
-        "expected": "TestCase",
-        "hint": "Start by copying the first line of the worked example: class TestCase:",
-        "qa": "Guided workshops prepare you for independent assignments."
-      },
-      {
-        "id": "14-theory-1",
-        "title": "What are classes and objects?",
-        "type": "reading",
-        "intro": "What are classes and objects?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "What is OOP?: Object-Oriented Programming groups related data and actions together. A class is a blueprint; an object is a specific thing made from it.\n\nClass versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.",
-        "example": "class TestCase:\n    pass\n\ntest = TestCase()\nprint(type(test).__name__)",
-        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
-        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "expected": "Example only",
-        "hint": "Run the example and identify the new keyword.",
-        "qa": "Page objects and reusable test helpers organize real QA automation.",
-        "theorySections": []
-      },
-      {
-        "id": "14-theory-2",
-        "title": "What are __init__ and self?",
-        "type": "reading",
-        "intro": "What are __init__ and self?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "Class versus object: One class can create many independent objects, just as one blueprint can describe multiple houses.\n\nConstructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\na = TestCase('Login')\nb = TestCase('Search')\nprint(a.name)\nprint(b.name)",
-        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
-        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "expected": "Example only",
-        "hint": "Run the example and identify the new keyword.",
-        "qa": "Page objects and reusable test helpers organize real QA automation.",
-        "theorySections": []
-      },
-      {
-        "id": "14-theory-3",
-        "title": "What are attributes?",
-        "type": "reading",
-        "intro": "What are attributes?. Learn the idea, study the worked example, and then try it yourself.",
-        "concept": "Constructor __init__ and self: __init__ runs when an object is created. self refers to that particular object. self.name stores its name.\n\nAttributes: An attribute is data belonging to an object. Different objects can hold different values.\n\nMethods: A method is a function inside a class. It uses self to access that object's data.\n\nInheritance: Inheritance allows a new class to reuse behavior from a parent class. Learn basic classes first.",
-        "example": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "instructions": "Read the explanation, run the worked example, and mark this lesson as read.",
-        "starter": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "solution": "class TestCase:\n    def __init__(self, name):\n        self.name = name\n\ntest = TestCase('Login')\nprint(test.name)",
-        "expected": "Example only",
-        "hint": "Run the example and identify the new keyword.",
-        "qa": "Page objects and reusable test helpers organize real QA automation.",
-        "theorySections": []
       },
       {
         "id": "14-theory-4",
