@@ -530,6 +530,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "01-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Build a release banner",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def release_banner(version):\n    return 'Release: ' + version",
+        "instructions": "Create a function release_banner(version) that returns 'Release: ' followed by the version. Use the function to print Release: 2.1.",
+        "starter": "# QA Mission: Build a release banner\n# Write your solution below.\n",
+        "solution": "def release_banner(version):\n    return 'Release: ' + version\nprint(release_banner('2.1'))",
+        "expected": "Release: 2.1",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert release_banner('3.0') == 'Release: 3.0'"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert release_banner('') == 'Release: '"
+          }
+        ]
       }
     ]
   },
@@ -1062,6 +1086,30 @@
           {
             "heading": "Check your understanding",
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+          }
+        ]
+      },
+      {
+        "id": "02-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Choose a test browser",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def browser_label(browser):\n    return 'Testing on ' + browser",
+        "instructions": "Write a function browser_label(browser) that returns 'Testing on ' plus the browser name. Print the result for Firefox.",
+        "starter": "# QA Mission: Choose a test browser\n# Write your solution below.\n",
+        "solution": "def browser_label(browser):\n    return 'Testing on ' + browser\nprint(browser_label('Firefox'))",
+        "expected": "Testing on Firefox",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert browser_label('Chrome') == 'Testing on Chrome'"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert browser_label('Edge') == 'Testing on Edge'"
           }
         ]
       }
@@ -1598,6 +1646,34 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "03-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Classify a status code",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def is_success(code):\n    return 200 <= code < 300",
+        "instructions": "Write is_success(code) returning a Boolean for HTTP codes from 200 through 299. Print the result for 201.",
+        "starter": "# QA Mission: Classify a status code\n# Write your solution below.\n",
+        "solution": "def is_success(code):\n    return 200 <= code < 300\nprint(is_success(201))",
+        "expected": "True",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert is_success(200) is True"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert is_success(299) is True"
+          },
+          {
+            "name": "Additional input 3",
+            "code": "assert is_success(404) is False"
+          }
+        ]
       }
     ]
   },
@@ -2130,6 +2206,30 @@
           {
             "heading": "Check your understanding",
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+          }
+        ]
+      },
+      {
+        "id": "04-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Normalize a test label",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def normalize_label(text):\n    return text.strip().lower()",
+        "instructions": "Write normalize_label(text) that removes surrounding whitespace and converts text to lowercase. Print the result for '  LOGIN  '.",
+        "starter": "# QA Mission: Normalize a test label\n# Write your solution below.\n",
+        "solution": "def normalize_label(text):\n    return text.strip().lower()\nprint(normalize_label('  LOGIN  '))",
+        "expected": "login",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert normalize_label('  Search ') == 'search'"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert normalize_label('API') == 'api'"
           }
         ]
       }
@@ -2666,6 +2766,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "05-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Calculate pass percentage",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def pass_percentage(passed,total):\n    return round(passed / total * 100) if total else 0",
+        "instructions": "Write pass_percentage(passed,total) returning a rounded whole-number percentage, and 0 when total is zero. Print the percentage for 8 of 10.",
+        "starter": "# QA Mission: Calculate pass percentage\n# Write your solution below.\n",
+        "solution": "def pass_percentage(passed,total):\n    return round(passed / total * 100) if total else 0\nprint(pass_percentage(8,10))",
+        "expected": "80",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert pass_percentage(0,0) == 0"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert pass_percentage(3,4) == 75"
+          }
+        ]
       }
     ]
   },
@@ -3198,6 +3322,30 @@
           {
             "heading": "Check your understanding",
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+          }
+        ]
+      },
+      {
+        "id": "06-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Collect failed test names",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def failed_names(results):\n    return [name for name,passed in results if not passed]",
+        "instructions": "Write failed_names(results) accepting a list of (name, passed) tuples and returning only failed names. Print the result for [('Login',True),('Search',False)].",
+        "starter": "# QA Mission: Collect failed test names\n# Write your solution below.\n",
+        "solution": "def failed_names(results):\n    return [name for name,passed in results if not passed]\nprint(failed_names([('Login',True),('Search',False)]))",
+        "expected": "['Search']",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert failed_names([]) == []"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert failed_names([('A',False),('B',True),('C',False)]) == ['A','C']"
           }
         ]
       }
@@ -3734,6 +3882,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "07-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Read an API response safely",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def response_status(response):\n    return response.get('status',0)",
+        "instructions": "Write response_status(response) that returns the status field, or 0 if missing. Print the status for {'status': 201}.",
+        "starter": "# QA Mission: Read an API response safely\n# Write your solution below.\n",
+        "solution": "def response_status(response):\n    return response.get('status',0)\nprint(response_status({'status':201}))",
+        "expected": "201",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert response_status({}) == 0"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert response_status({'status':404}) == 404"
+          }
+        ]
       }
     ]
   },
@@ -4266,6 +4438,30 @@
           {
             "heading": "Check your understanding",
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
+          }
+        ]
+      },
+      {
+        "id": "08-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Decide whether an API test passes",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def test_passes(actual,expected):\n    if actual == expected:",
+        "instructions": "Write test_passes(actual,expected) returning True only when status codes match. Print the result for 404 and 404.",
+        "starter": "# QA Mission: Decide whether an API test passes\n# Write your solution below.\n",
+        "solution": "def test_passes(actual,expected):\n    if actual == expected:\n        return True\n    return False\nprint(test_passes(404,404))",
+        "expected": "True",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert test_passes(500,200) is False"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert test_passes(201,201) is True"
           }
         ]
       }
@@ -4802,6 +4998,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "09-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Count failed executions",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def count_failures(statuses):\n    failures = 0",
+        "instructions": "Write count_failures(statuses) using a for loop to count every value other than 'PASS'. Print the count for ['PASS','FAIL','PASS','ERROR'].",
+        "starter": "# QA Mission: Count failed executions\n# Write your solution below.\n",
+        "solution": "def count_failures(statuses):\n    failures = 0\n    for status in statuses:\n        if status != 'PASS':\n            failures += 1\n    return failures\nprint(count_failures(['PASS','FAIL','PASS','ERROR']))",
+        "expected": "2",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert count_failures([]) == 0"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert count_failures(['FAIL','FAIL']) == 2"
+          }
+        ]
       }
     ]
   },
@@ -5336,6 +5556,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "10-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Limit retry attempts",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def retry_count(success_on,max_attempts):\n    attempts = 0",
+        "instructions": "Write retry_count(success_on,max_attempts) using a while loop. Return how many attempts run before success or the limit. Print retry_count(2,3).",
+        "starter": "# QA Mission: Limit retry attempts\n# Write your solution below.\n",
+        "solution": "def retry_count(success_on,max_attempts):\n    attempts = 0\n    while attempts < max_attempts:\n        attempts += 1\n        if attempts == success_on:\n            break\n    return attempts\nprint(retry_count(2,3))",
+        "expected": "2",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert retry_count(10,3) == 3"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert retry_count(1,5) == 1"
+          }
+        ]
       }
     ]
   },
@@ -5732,6 +5976,30 @@
           {
             "heading": "Check your understanding",
             "body": "1. Why does a function help avoid repetition?\n2. What is the difference between a parameter and an argument?\n3. What does return do?\n4. What happens when you call check() with no argument?"
+          }
+        ]
+      },
+      {
+        "id": "11-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Build a reusable assertion",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def assert_status(actual,expected):\n    return 'PASS' if actual == expected else 'FAIL'",
+        "instructions": "Write assert_status(actual,expected) returning 'PASS' for matching codes and 'FAIL' otherwise. Print assert_status(200,200).",
+        "starter": "# QA Mission: Build a reusable assertion\n# Write your solution below.\n",
+        "solution": "def assert_status(actual,expected):\n    return 'PASS' if actual == expected else 'FAIL'\nprint(assert_status(200,200))",
+        "expected": "PASS",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert assert_status(404,200) == 'FAIL'"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert assert_status(201,201) == 'PASS'"
           }
         ]
       }
@@ -6239,6 +6507,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "12-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Handle invalid test input",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def safe_int(value):\n    try:",
+        "instructions": "Write safe_int(value) that returns an integer or None if conversion fails. Print safe_int('bad').",
+        "starter": "# QA Mission: Handle invalid test input\n# Write your solution below.\n",
+        "solution": "def safe_int(value):\n    try:\n        return int(value)\n    except (ValueError,TypeError):\n        return None\nprint(safe_int('bad'))",
+        "expected": "None",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert safe_int('42') == 42"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert safe_int(None) is None"
+          }
+        ]
       }
     ]
   },
@@ -6744,6 +7036,30 @@
             "body": "Before continuing, answer these questions in your own words:\n1. What does the main Python keyword or operation do?\n2. Which part of the example controls the output?\n3. What mistake is shown above, and how do you fix it?\n4. Where would this be useful in a QA test?"
           }
         ]
+      },
+      {
+        "id": "13-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Parse an API JSON payload",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "import json\ndef get_product_id(raw_json):",
+        "instructions": "Write get_product_id(raw_json) that parses JSON and returns the id field, or None if absent. Print the id from '{\"id\": 7}'.",
+        "starter": "# QA Mission: Parse an API JSON payload\n# Write your solution below.\n",
+        "solution": "import json\ndef get_product_id(raw_json):\n    return json.loads(raw_json).get('id')\nprint(get_product_id('{\"id\": 7}'))",
+        "expected": "7",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert get_product_id('{}') is None"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert get_product_id('{\"id\": 19}') == 19"
+          }
+        ]
       }
     ]
   },
@@ -7127,6 +7443,30 @@
             "body": "1. What is the difference between a class and an object?\n2. Why do we use self?\n3. What is an attribute? What is a method?\n4. How does inheritance differ from polymorphism?"
           }
         ]
+      },
+      {
+        "id": "14-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Model a test case",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "class TestCase:\n    def __init__(self,name,expected_status):",
+        "instructions": "Create class TestCase with name and expected_status fields and a passes(actual_status) method. Print whether a 200 response passes.",
+        "starter": "# QA Mission: Model a test case\n# Write your solution below.\n",
+        "solution": "class TestCase:\n    def __init__(self,name,expected_status):\n        self.name = name\n        self.expected_status = expected_status\n    def passes(self,actual_status):\n        return actual_status == self.expected_status\nprint(TestCase('Health',200).passes(200))",
+        "expected": "True",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert TestCase('Missing',404).passes(404) is True"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert TestCase('Health',200).passes(500) is False"
+          }
+        ]
       }
     ]
   },
@@ -7392,6 +7732,30 @@
         "expected": "QA READY",
         "hint": "Read the concept lesson and compare each line to the output.",
         "qa": "Review and repetition help you remember Python syntax."
+      },
+      {
+        "id": "15-qa-mission",
+        "type": "exercise",
+        "title": "QA Mission: Create a QA summary",
+        "intro": "Apply this chapter to a realistic software testing task.",
+        "concept": "Solve a reusable function or class challenge. Multiple inputs will be tested.",
+        "example": "def summarize(results):\n    return {'passed':sum(results),'failed':len(results)-sum(results)}",
+        "instructions": "Write summarize(results) returning a dictionary with passed and failed counts from a list of Boolean test results. Print the summary for [True,False,True].",
+        "starter": "# QA Mission: Create a QA summary\n# Write your solution below.\n",
+        "solution": "def summarize(results):\n    return {'passed':sum(results),'failed':len(results)-sum(results)}\nprint(summarize([True,False,True]))",
+        "expected": "{'passed': 2, 'failed': 1}",
+        "hint": "Define the named function or class first. Test normal input and an edge case. Use the chapter concept, then print the requested example.",
+        "qa": "Real QA automation must work for many responses, not only the sample.",
+        "hiddenTests": [
+          {
+            "name": "Additional input 1",
+            "code": "assert summarize([]) == {'passed':0,'failed':0}"
+          },
+          {
+            "name": "Additional input 2",
+            "code": "assert summarize([False,False]) == {'passed':0,'failed':2}"
+          }
+        ]
       }
     ]
   }
