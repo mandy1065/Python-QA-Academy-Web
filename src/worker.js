@@ -9,11 +9,12 @@ async function init(){
 init().catch(error=>self.postMessage({type:'fatal',error:String(error)}));
 self.onmessage=async event=>{
   if(event.data.type!=='run'||!python)return;
-  const {id,code,expected}=event.data;
+  const {id,code,expected,hiddenTests=[]}=event.data;
   try{
     // Each run uses a fresh Python namespace; only console output is returned.
     python.globals.set('_academy_code',code);
     python.globals.set('_academy_expected',expected ?? '');
+    python.globals.set('_academy_hidden_tests_json',JSON.stringify(hiddenTests));
     const result=await python.runPythonAsync(`
 import io, contextlib, traceback, json
 _stream = io.StringIO()
@@ -24,7 +25,18 @@ try:
         exec(compile(_academy_code, '<student>', 'exec'), _namespace, _namespace)
 except BaseException:
     _error = traceback.format_exc(limit=4)
-json.dumps({'output': _stream.getvalue()[:12000], 'error': _error})
+_test_results = []
+if _error is None:
+    for _test in json.loads(_academy_hidden_tests_json):
+        try:
+            with contextlib.redirect_stdout(io.StringIO()):
+                exec(compile(_test['code'], '<assessment>', 'exec'), _namespace, _namespace)
+            _test_results.append({'name':_test['name'],'pass':True})
+        except AssertionError:
+            _test_results.append({'name':_test['name'],'pass':False,'detail':'The solution failed an additional input or edge case.'})
+        except BaseException as _exc:
+            _test_results.append({'name':_test['name'],'pass':False,'detail':type(_exc).__name__+': '+str(_exc)[:180]})
+json.dumps({'output': _stream.getvalue()[:12000], 'error': _error, 'tests': _test_results})
 `);
     self.postMessage({type:'result',id,...JSON.parse(result)});
   }catch(error){self.postMessage({type:'result',id,output:'',error:String(error)});}
