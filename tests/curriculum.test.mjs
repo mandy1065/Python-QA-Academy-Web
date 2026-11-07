@@ -51,3 +51,19 @@ test('chapters retain core teaching, corrections, and QA applications',()=>{
   }
  }
 });
+
+test('type conversion lesson teaches conversion rather than only inspecting types',()=>{
+ const chapter=chapters.find(c=>c.title==='Python Data Types');
+ const lesson=chapter.lessons.find(l=>l.id==='03-theory-3');
+ const examples=lesson.theorySections.map(s=>s.code||'').join('\\n');
+ assert.match(examples,/int\\(/);
+ assert.match(examples,/float\\(/);
+ assert.match(examples,/str\\(/);
+ assert.match(examples,/ValueError|bool\\(/);
+});
+test('chapter intros do not repeat entire lessons',()=>{
+ for(const c of chapters){
+  const intro=c.lessons.find(l=>l.id.endsWith('-intro'));
+  assert.ok(intro?.theorySections?.length<=2,c.title+' intro repeats the lesson content');
+ }
+});
