@@ -14,7 +14,7 @@ self.onmessage=async event=>{
     // Each run uses a fresh Python namespace; only console output is returned.
     python.globals.set('_academy_code',code);
     python.globals.set('_academy_expected',expected ?? '');
-    python.globals.set('_academy_hidden_tests',hiddenTests);
+    python.globals.set('_academy_hidden_tests_json',JSON.stringify(hiddenTests));
     const result=await python.runPythonAsync(`
 import io, contextlib, traceback, json
 _stream = io.StringIO()
@@ -27,7 +27,7 @@ except BaseException:
     _error = traceback.format_exc(limit=4)
 _test_results = []
 if _error is None:
-    for _test in _academy_hidden_tests.to_py():
+    for _test in json.loads(_academy_hidden_tests_json):
         try:
             with contextlib.redirect_stdout(io.StringIO()):
                 exec(compile(_test['code'], '<assessment>', 'exec'), _namespace, _namespace)
